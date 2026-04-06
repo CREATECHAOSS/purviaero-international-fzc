@@ -6,18 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        dark: "#0A0A0F",
-        surface: {
-          DEFAULT: "#111111",
-          light: "#1A1A1A",
-        },
-        accent: "#0ECFB0",
-        silver: "#8B949E",
-      },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        heading: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        rajdhani: ["var(--font-rajdhani)", "sans-serif"],
+      },
+      colors: {
+        primary: "#0E1C36", // Navy
+        accent: "#B8872A", // Gold
+        background: "#FFFFFF", // White
+        "text-secondary": "#666258",
       },
     },
   },

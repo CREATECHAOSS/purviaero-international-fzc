@@ -1,115 +1,193 @@
-import ContactForm from '@/components/ContactForm';
+"use client";
 
-export const metadata = {
-  title: 'Contact Us | Purvi Aero International FZC',
-  description: 'Submit your RFQ to the Purvi Aero International FZC procurement team. We respond within 2 business hours.',
-};
+import { useState } from "react";
+import FadeIn from "@/components/FadeIn";
 
+/* ─────────────────────────────────────────────
+   Contact Page — Purvi Aero International FZC
+───────────────────────────────────────────── */
 export default function ContactPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    companyName: "",
+    email: "",
+    phone: "",
+    partNumber: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // ─────────────────────────────────────────────
+    // REPLACE ENDPOINT HERE (Formspree/Netlify)
+    // ─────────────────────────────────────────────
+    // For now, simulating a successful submission
+    console.log("Form Data Submitted:", formData);
+    setIsSubmitted(true);
+  };
+
   return (
-    <>
-      {/* Header */}
-      <section className="bg-dark border-b border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-surface to-dark opacity-50" />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-32 text-center lg:text-left">
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Get In Touch</p>
-          <div className="lg:flex items-end justify-between gap-12">
-            <h1 className="text-4xl md:text-6xl font-heading font-black text-white leading-[1.15] max-w-2xl">
-              Connect with Our Procurement Team.
+    <main className="bg-white py-20 min-h-[80vh]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="flex flex-col lg:flex-row gap-20">
+          {/* ───── LEFT SIDE: INFO ───── */}
+          <FadeIn className="lg:w-1/3">
+            <h1
+              className="text-4xl sm:text-5xl font-bold mb-8 text-[#0E1C36]"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            >
+              Get In Touch
             </h1>
-            <p className="mt-6 lg:mt-0 text-gray-400 max-w-md leading-relaxed text-lg font-medium">
-              Submit your RFQ and a specialist will respond within 2 business hours. For AOG, use our hotline directly.
+            <p className="text-xl text-[#374151] leading-relaxed mb-12">
+              Submit your parts requirement or general enquiry and our team will respond within 24 hours.
             </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Form + Info */}
-      <section className="bg-dark">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
-            {/* Form — takes 2 cols */}
-            <div className="lg:col-span-2">
-              <div className="card border-white/10 p-10 backdrop-blur-sm relative">
-                <div className="absolute top-0 right-0 p-8">
-                   <div className="w-16 h-16 border-t font-heading border-r border-accent/20 rounded-tr-3xl" />
-                </div>
-                <h2 className="text-2xl font-bold font-heading text-white mb-2 tracking-tight">Request for Quotation (RFQ)</h2>
-                <p className="text-sm text-gray-500 mb-10">All fields marked <span className="text-accent">*</span> are required.</p>
-                <ContactForm />
-              </div>
-            </div>
-
-            {/* Contact Info Sidebar */}
-            <div className="space-y-8 lg:sticky lg:top-32">
-              <div className="card bg-surface-light border border-white/5 p-8">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-8">Contact Details</h3>
-                <ul className="space-y-8">
-                  <li className="flex items-start gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-surface border border-white/5 text-accent flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs text-silver mb-1 font-semibold uppercase tracking-wider">RFQ Email</p>
-                      <a href="mailto:rfq@purviaero.com" className="text-white font-bold text-lg hover:text-accent transition-colors tracking-tight">
-                        rfq@purviaero.com
-                      </a>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-surface border border-white/5 text-accent flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs text-silver mb-1 font-semibold uppercase tracking-wider">AOG Hotline</p>
-                      <a href="tel:+919820603873" className="text-white font-bold text-lg hover:text-accent transition-colors tracking-tight">
-                        +91 98206 03873
-                      </a>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-[#25D366]/5 border border-[#25D366]/20 text-[#25D366] flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs text-silver mb-1 font-semibold uppercase tracking-wider">WhatsApp</p>
-                      <a href="https://wa.me/919820603873" target="_blank" rel="noopener noreferrer" className="text-white font-bold text-lg hover:text-[#25D366] transition-colors tracking-tight">
-                        Chat on WhatsApp
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="card bg-accent p-8 text-dark overflow-hidden relative group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 blur-2xl rounded-full translate-x-1/2 -translate-y-1/2" />
-                <div className="relative z-10 flex flex-col items-start gap-1 mb-5">
-                   <div className="flex items-center gap-2 px-3 py-1 bg-dark/10 rounded-full">
-                      <span className="w-2 h-2 rounded-full bg-dark animate-pulse" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-dark/80">Active Now</span>
-                   </div>
-                </div>
-                <h3 className="font-heading font-black text-2xl mb-2 tracking-tight">AOG Support</h3>
-                <p className="text-dark/70 text-sm font-medium leading-relaxed mb-8">
-                  Typical response time: &lt;2 minutes. Worldwide dispatch.
-                </p>
-                <a href="/aog" className="inline-flex items-center gap-2 bg-dark text-white text-xs font-bold px-6 py-3 rounded-lg hover:bg-dark/80 transition-all">
-                  Go to AOG Desk
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <div className="space-y-8">
+              {/* Email Address */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#0E1C36]/5 flex items-center justify-center rounded-xl">
+                  <svg className="w-6 h-6 text-[#B8872A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                </a>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#B8872A] mb-1">Email Our Team</p>
+                  <p className="text-[#0E1C36] font-medium text-lg">info@purviaero.com</p>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#0E1C36]/5 flex items-center justify-center rounded-xl">
+                  <svg className="w-6 h-6 text-[#B8872A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#B8872A] mb-1">Our Location</p>
+                  <p className="text-[#0E1C36] font-medium text-lg">Dubai, United Arab Emirates</p>
+                </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
+
+          {/* ───── RIGHT SIDE: FORM ───── */}
+          <FadeIn delay={120} className="lg:w-2/3">
+            {isSubmitted ? (
+              <div className="bg-[#F5F3EE] p-12 rounded-[2rem] text-center border border-[#0E1C36]/5">
+                <div className="w-20 h-20 bg-[#B8872A] rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg shadow-[#B8872A]/20">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h2
+                  className="text-3xl font-bold text-[#0E1C36] mb-4"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  Submission Received
+                </h2>
+                <p className="text-[#374151] text-lg max-w-md mx-auto">
+                  Thank you for reaching out to Purvi Aero International. Our technical team has received your enquiry and will respond within 24 hours.
+                </p>
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="mt-10 text-[#B8872A] font-bold border-b border-[#B8872A]/30 hover:border-[#B8872A] transition-all"
+                >
+                  Send Another Inquiry
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#0E1C36] mb-2">Full Name</label>
+                  <input
+                    required
+                    type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    placeholder="e.g. John Smith"
+                    className="w-full bg-[#F5F3EE]/50 border border-[#0E1C36]/10 px-6 py-4 rounded-xl focus:outline-none focus:border-[#B8872A] transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#0E1C36] mb-2">Company Name</label>
+                  <input
+                    required
+                    type="text"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                    placeholder="e.g. Global Airways"
+                    className="w-full bg-[#F5F3EE]/50 border border-[#0E1C36]/10 px-6 py-4 rounded-xl focus:outline-none focus:border-[#B8872A] transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#0E1C36] mb-2">Email Address</label>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="e.g. john@company.com"
+                    className="w-full bg-[#F5F3EE]/50 border border-[#0E1C36]/10 px-6 py-4 rounded-xl focus:outline-none focus:border-[#B8872A] transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#0E1C36] mb-2">Phone Number (Optional)</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+1 (555) 000-0000"
+                    className="w-full bg-[#F5F3EE]/50 border border-[#0E1C36]/10 px-6 py-4 rounded-xl focus:outline-none focus:border-[#B8872A] transition-all"
+                  />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#0E1C36] mb-2">Part Number / Description (Optional)</label>
+                  <input
+                    type="text"
+                    name="partNumber"
+                    value={formData.partNumber}
+                    onChange={handleChange}
+                    placeholder="e.g. PN: 123456-789"
+                    className="w-full bg-[#F5F3EE]/50 border border-[#0E1C36]/10 px-6 py-4 rounded-xl focus:outline-none focus:border-[#B8872A] transition-all"
+                  />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-xs font-bold uppercase tracking-widest text-[#0E1C36] mb-2">Message</label>
+                  <textarea
+                    required
+                    name="message"
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="How can we assist you today?"
+                    className="w-full bg-[#F5F3EE]/50 border border-[#0E1C36]/10 px-6 py-4 rounded-xl focus:outline-none focus:border-[#B8872A] transition-all resize-none"
+                  ></textarea>
+                </div>
+                <div className="md:col-span-2 pt-4">
+                  <button
+                    type="submit"
+                    className="btn-gold w-full md:w-auto px-12 py-5 shadow-lg hover:shadow-[#B8872A]/20"
+                  >
+                    Send Enquiry
+                  </button>
+                </div>
+              </form>
+            )}
+          </FadeIn>
         </div>
-      </section>
-    </>
+      </div>
+    </main>
   );
 }

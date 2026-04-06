@@ -1,83 +1,111 @@
-export const metadata = {
-  title: 'About Us | Purvi Aero International FZC',
-  description: 'Learn how Purvi Aero International FZC bridges complex procurement demands with seamless aviation supply chain execution.',
-};
+import Link from "next/link";
+import FadeIn from "@/components/FadeIn";
 
-const pillars = [
-  { label: 'Commercial Airlines', icon: '✈' },
-  { label: 'MRO Facilities', icon: '🔧' },
-  { label: 'Private & Charter Operators', icon: '🛩' },
-  { label: 'Rotorcraft Operators', icon: '🚁' },
-];
+export const metadata = {
+  title: 'About Purvi Aero International FZC | UAE Aviation Parts Trader',
+  description: 'Founded by aviation professionals. Purvi Aero International FZC is a UAE Free Zone registered trading company supplying certified aircraft components and MRO consumables globally.',
+  openGraph: {
+    title: 'About Purvi Aero International FZC | UAE Aviation Parts Trader',
+    description: 'Founded by aviation professionals. Purvi Aero International FZC is a UAE Free Zone registered trading company supplying certified aircraft components and MRO consumables globally.',
+  },
+};
 
 export default function AboutPage() {
   return (
-    <>
-      {/* Page Header */}
-      <section className="bg-dark border-b border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-surface to-dark" />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-32">
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">About Purvi Aero</p>
-          <h1 className="text-4xl md:text-6xl font-heading font-black text-white leading-[1.15] max-w-3xl">
-            Keeping Fleets Airborne Through Supply Chain Excellence.
+    <main>
+      {/* ── SECTION 1: HERO ── */}
+      <section className="bg-[#0E1C36] py-20 text-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
+          <div className="inline-flex items-center gap-2 mb-6 justify-center">
+            <span className="block w-8 h-px bg-[#B8872A]" />
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#B8872A]">
+              Our Identity
+            </span>
+            <span className="block w-8 h-px bg-[#B8872A]" />
+          </div>
+          <h1 
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight"
+            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          >
+            About Purvi Aero <br className="hidden md:block"/> International FZC
           </h1>
+          <p className="text-lg sm:text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+            Founded by aviation professionals with decades of combined experience, Purvi Aero International FZC is a UAE Free Zone registered trading company specialising in the procurement and supply of aircraft spares, consumables and rotables.
+          </p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="bg-dark">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Text */}
-            <div className="space-y-6">
-              <p className="text-lg text-gray-300 leading-relaxed font-medium">
-                Purvi Aero International FZC bridges the gap between complex procurement demands and seamless operational execution. We are an integrated aviation supplier dedicated to providing fully traceable parts to Commercial Airlines, MRO facilities, and Private fleets. Our mission is to eliminate operational downtime by handling the complexities of sourcing, technical records verification, and logistics.
+      {/* ── SECTION 2: MISSION & ROOTS ── */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+            {/* Left Box: Our Mission */}
+            <FadeIn className="relative p-10 border border-[#0E1C36]/5 rounded-3xl bg-[#F5F3EE]/30">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="w-12 h-12 bg-[#0E1C36] flex items-center justify-center rounded-xl shadow-lg">
+                  <svg className="w-6 h-6 text-[#B8872A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14H11V21L20 10H13z" />
+                  </svg>
+                </div>
+                <h2 
+                  className="text-2xl font-bold text-[#0E1C36]"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  Our Mission
+                </h2>
+              </div>
+              <p className="text-[#374151] text-lg leading-relaxed mb-6">
+                Our mission is to provide the global aviation industry with a reliable, fast, and fully traceable sourcing partner. We understand that in aviation, every minute counts, which is why we've built a supply chain that prioritises speed without ever compromising on safety or certification.
               </p>
-              <p className="text-gray-400 leading-relaxed text-base">
-                Founded by aviation professionals, we understand the critical nature of every component that keeps an aircraft airworthy. Every part we supply undergoes rigorous documentation review to ensure compliance with FAA, EASA, and DGCA regulations before it reaches your facility.
+              <div className="h-1.5 w-20 bg-[#B8872A] rounded-full" />
+            </FadeIn>
+
+            {/* Right Box: Our Approach */}
+            <FadeIn delay={120} className="relative p-10 border border-[#0E1C36]/5 rounded-3xl bg-[#F5F3EE]/30">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="w-12 h-12 bg-[#0E1C36] flex items-center justify-center rounded-xl shadow-lg">
+                  <svg className="w-6 h-6 text-[#B8872A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14H11V21L20 10H13z" />
+                  </svg>
+                </div>
+                <h2 
+                  className="text-2xl font-bold text-[#0E1C36]"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  Our Approach
+                </h2>
+              </div>
+              <p className="text-[#374151] text-lg leading-relaxed mb-6">
+                We operate as a lean, specialist procurement partner — not a catalogue distributor. Every enquiry is handled directly by experienced aviation professionals who understand documentation requirements, airworthiness standards, and the urgency of AOG situations.
               </p>
-
-              <div className="pt-10 grid grid-cols-2 gap-6">
-                {[
-                  { value: '15+', label: 'Years Experience' },
-                  { value: '100%', label: 'Parts Traceable' },
-                  { value: 'FAA/EASA', label: 'Compliance Standards' },
-                  { value: 'NFO', label: 'Expedite Capability' },
-                ].map((item) => (
-                  <div key={item.label} className="card p-6 border border-white/5">
-                    <p className="font-heading text-3xl font-black text-white">{item.value}</p>
-                    <p className="text-xs text-accent mt-2 uppercase tracking-widest font-semibold">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="space-y-8">
-              <div className="card bg-surface-light border border-white/5">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">We Serve</h3>
-                <ul className="space-y-4">
-                  {pillars.map((p) => (
-                    <li key={p.label} className="flex items-center gap-4 text-white font-medium">
-                      <div className="w-10 h-10 flex items-center justify-center bg-surface rounded-lg border border-white/5 text-lg">
-                        {p.icon}
-                      </div>
-                      {p.label}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="card bg-surface border-l-4 border-l-accent border-y-white/5 border-r-white/5">
-                <h3 className="font-heading font-bold text-xl text-white mb-3">Our Core Commitment</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Zero compromise on airworthiness documentation. Every transaction is backed by complete chain-of-custody records and certified inspection documentation.
-                </p>
-              </div>
-            </div>
+              <div className="h-1.5 w-20 bg-[#B8872A] rounded-full" />
+            </FadeIn>
           </div>
         </div>
       </section>
-    </>
+
+      {/* ── SECTION 3: PLACEHOLDER ── */}
+      <section className="bg-[#F5F3EE] py-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="bg-white p-12 rounded-[2rem] shadow-sm border border-[#0E1C36]/5 relative overflow-hidden group">
+            {/* Decorative background circle */}
+            <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#B8872A]/5 rounded-full transition-transform group-hover:scale-150 duration-700" />
+            
+            <p className="text-xl text-[#0E1C36] font-medium mb-6">
+              Our offices and team details coming soon.
+            </p>
+            <p className="text-[#374151] mb-10">
+              We are currently expanding our digital presence. For immediate enquiries or to request a quote, please use our contact form.
+            </p>
+            <Link 
+              href="/contact" 
+              className="btn-gold px-10 py-4 inline-block shadow-lg hover:shadow-[#B8872A]/20"
+            >
+              Go to Contact Form
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

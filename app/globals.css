@@ -1,29 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Base ─── */
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-white text-[#374151] antialiased;
+  }
+
+  /* No pure black text anywhere */
+  * {
+    color-adjust: exact;
   }
 }
 
+/* ─── Component utilities ─── */
 @layer components {
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 bg-accent text-dark font-bold text-sm tracking-wide rounded transition-all duration-200 hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(14,207,176,0.3)] focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark;
+
+  /* Gold filled pill button */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full
+           font-semibold text-sm tracking-wide text-white
+           transition-all duration-300 shadow-md
+           hover:shadow-lg hover:-translate-y-0.5 active:scale-95;
+    background-color: #B8872A;
   }
-  .btn-outline {
-    @apply inline-flex items-center justify-center px-7 py-3.5 border border-white/20 bg-transparent text-white font-bold text-sm tracking-wide rounded transition-all duration-200 hover:border-accent hover:text-accent hover:bg-accent/5 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark;
+  .btn-gold:hover {
+    background-color: #A17624;
   }
-  .section-heading {
-    @apply font-heading text-3xl md:text-5xl font-bold text-white leading-tight tracking-tight;
+
+  /* Navy outline pill button */
+  .btn-navy-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full
+           font-semibold text-sm tracking-wide border-2
+           transition-all duration-300
+           hover:-translate-y-0.5 active:scale-95;
+    border-color: #0E1C36;
+    color: #0E1C36;
+    background-color: transparent;
   }
-  .section-subheading {
-    @apply text-lg text-gray-400 leading-relaxed;
+  .btn-navy-outline:hover {
+    background-color: #0E1C36;
+    color: #FFFFFF;
   }
-  .card {
-    @apply bg-surface border border-white/5 rounded-2xl p-8 transition-colors duration-200 hover:border-white/10 hover:bg-surface-light;
+
+  /* Section wrapper — consistent horizontal padding */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 sm:px-10 lg:px-16;
   }
+
+  /* Eyebrow label */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold
+           tracking-[0.22em] uppercase;
+    color: #B8872A;
+  }
+}
+
+/* ─── Fade-in animation ─── */
+@layer utilities {
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger siblings */
+  .fade-in-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-in-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-in-up:nth-child(4) { transition-delay: 0.3s; }
 }

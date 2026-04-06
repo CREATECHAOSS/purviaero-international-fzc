@@ -1,88 +1,55 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-const footerLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/services', label: 'Services' },
-  { href: '/aog', label: 'AOG Desk' },
-  { href: '/contact', label: 'Contact' },
-];
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
 
-export default function Footer() {
   return (
-    <footer className="bg-dark border-t border-white/5 text-silver">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Brand */}
-          <div>
-            <p className="text-xl font-heading font-bold text-white tracking-wide">
-              Purvi Aero <span className="text-accent">International</span> FZC
-            </p>
-            <p className="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
-              Precision aviation parts procurement for Commercial Airlines, MROs, and Charter Operators worldwide.
-            </p>
-          </div>
+    <footer className="bg-[#0E1C36] text-white py-14 border-t border-[#B8872A]/20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col items-center">
 
-          {/* Quick Links */}
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-5">Quick Links</p>
-            <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-400 hover:text-accent transition-colors duration-150"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        {/* Brand */}
+        <div className="flex flex-col items-center mb-6 font-rajdhani">
+          <div className="flex items-baseline space-x-1">
+            <span style={{ fontWeight: 700, color: "#B8872A", fontSize: "20px", letterSpacing: "3px" }}>
+              PURVI AERO
+            </span>
           </div>
-
-          {/* Contact */}
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-5">Contact</p>
-            <ul className="space-y-3 text-sm text-gray-400">
-              <li>
-                <a href="mailto:rfq@purviaero.com" className="hover:text-accent transition-colors">
-                  rfq@purviaero.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+919820603873" className="hover:text-accent transition-colors">
-                  AOG Hotline: +91 98206 03873
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/919820603873"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#25D366] transition-colors"
-                >
-                  WhatsApp Support
-                </a>
-              </li>
-            </ul>
-
-            <div className="mt-8">
-              <Link href="/aog" className="btn-outline text-xs px-6 py-3">
-                24/7 AOG Desk
-              </Link>
-            </div>
-          </div>
+          <span style={{ fontWeight: 400, color: "rgba(255,255,255,0.55)", fontSize: "10px", letterSpacing: "5px" }}>
+            INTERNATIONAL
+          </span>
         </div>
+        <p className="text-lg italic font-medium text-white/60 mb-8">
+          One Source. Every Part.
+        </p>
 
-        <div className="mt-14 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} Purvi Aero International FZC. All rights reserved.
+        {/* Divider */}
+        <div className="w-full h-px bg-white/10 mb-8" />
+
+        {/* Bottom row */}
+        <div className="flex flex-col md:flex-row justify-between w-full items-center gap-4 text-sm text-white/50">
+          <p>
+            &copy; {currentYear} Purvi Aero International FZC. All Rights Reserved.
           </p>
-          <p className="text-xs text-gray-500">
-            Traceability Guaranteed &bull; Global Sourcing &bull; Rapid AOG
-          </p>
+          <nav className="flex gap-6">
+            {[
+              { href: "/",         label: "Home"     },
+              { href: "/services", label: "Services" },
+              { href: "/about",    label: "About"    },
+              { href: "/contact",  label: "Contact"  },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="hover:text-[#B8872A] transition-colors duration-300"
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
