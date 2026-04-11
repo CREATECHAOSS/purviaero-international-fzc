@@ -3,81 +3,33 @@ import FadeIn from "@/components/FadeIn";
 
 /* ─────────────────────────────────────────────
    SVG Illustration 1 — Aircraft Spares
-   Theme: Component schematic / part diagram
+   Theme: Component schematic
 ───────────────────────────────────────────── */
 function SparesIllustration() {
   return (
     <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-[420px] mx-auto select-none">
-      {/* Background grid */}
       <defs>
         <pattern id="grid1" width="24" height="24" patternUnits="userSpaceOnUse">
           <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#0E1C36" strokeWidth="0.4" strokeOpacity="0.1"/>
         </pattern>
       </defs>
       <rect width="400" height="360" fill="url(#grid1)" rx="16"/>
-
-      {/* Central component body */}
       <rect x="140" y="120" width="120" height="120" rx="6" stroke="#0E1C36" strokeWidth="2" fill="white"/>
-      <rect x="155" y="135" width="90" height="90" rx="4" stroke="#0E1C36" strokeWidth="1" strokeOpacity="0.3" fill="none"/>
-
-      {/* Component inner detail */}
       <circle cx="200" cy="180" r="28" stroke="#B8872A" strokeWidth="2"/>
       <circle cx="200" cy="180" r="16" stroke="#B8872A" strokeWidth="1.5" strokeDasharray="4 3"/>
       <circle cx="200" cy="180" r="5" fill="#B8872A"/>
-
-      {/* Cross-hairs through center */}
-      <line x1="200" y1="148" x2="200" y2="212" stroke="#0E1C36" strokeWidth="0.8" strokeOpacity="0.4"/>
-      <line x1="168" y1="180" x2="232" y2="180" stroke="#0E1C36" strokeWidth="0.8" strokeOpacity="0.4"/>
-
-      {/* Left connector arm */}
       <rect x="60" y="165" width="80" height="30" rx="4" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <line x1="140" y1="180" x2="140" y2="180" stroke="#0E1C36" strokeWidth="1.5"/>
-      <circle cx="80" cy="180" r="6" stroke="#B8872A" strokeWidth="1.5" fill="white"/>
-      <line x1="60" y1="172" x2="60" y2="188" stroke="#B8872A" strokeWidth="2"/>
-
-      {/* Right connector arm */}
       <rect x="260" y="165" width="80" height="30" rx="4" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <circle cx="320" cy="180" r="6" stroke="#B8872A" strokeWidth="1.5" fill="white"/>
-      <line x1="340" y1="172" x2="340" y2="188" stroke="#B8872A" strokeWidth="2"/>
-
-      {/* Top connector arm */}
-      <rect x="185" y="50" width="30" height="70" rx="4" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <circle cx="200" cy="70" r="6" stroke="#B8872A" strokeWidth="1.5" fill="white"/>
-      <line x1="192" y1="50" x2="208" y2="50" stroke="#B8872A" strokeWidth="2"/>
-
-      {/* Bottom connector arm */}
-      <rect x="185" y="240" width="30" height="70" rx="4" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <circle cx="200" cy="290" r="6" stroke="#B8872A" strokeWidth="1.5" fill="white"/>
-      <line x1="192" y1="310" x2="208" y2="310" stroke="#B8872A" strokeWidth="2"/>
-
-      {/* Corner bolt indicators */}
-      {[[152,132],[248,132],[152,228],[248,228]].map(([x,y],i) => (
-        <g key={i}>
-          <circle cx={x} cy={y} r="5" stroke="#0E1C36" strokeWidth="1" fill="white"/>
-          <line x1={x-3} y1={y} x2={x+3} y2={y} stroke="#0E1C36" strokeWidth="0.8"/>
-          <line x1={x} y1={y-3} x2={x} y2={y+3} stroke="#0E1C36" strokeWidth="0.8"/>
-        </g>
-      ))}
-
-      {/* Data label tags */}
       <rect x="30" y="50" width="80" height="22" rx="3" fill="#0E1C36"/>
       <text x="70" y="65" textAnchor="middle" fontSize="8" fill="#B8872A" fontFamily="sans-serif" letterSpacing="1" fontWeight="600">P/N VERIFIED</text>
-
       <rect x="290" y="290" width="80" height="22" rx="3" fill="#0E1C36"/>
-      <text x="330" y="305" textAnchor="middle" fontSize="8" fill="#B8872A" fontFamily="sans-serif" letterSpacing="1" fontWeight="600">8130 / FORM 1</text>
-
-      {/* Dimension arrows */}
-      <line x1="140" y1="330" x2="260" y2="330" stroke="#0E1C36" strokeWidth="1" strokeOpacity="0.4"/>
-      <line x1="140" y1="326" x2="140" y2="334" stroke="#0E1C36" strokeWidth="1" strokeOpacity="0.4"/>
-      <line x1="260" y1="326" x2="260" y2="334" stroke="#0E1C36" strokeWidth="1" strokeOpacity="0.4"/>
-      <text x="200" y="345" textAnchor="middle" fontSize="8" fill="#0E1C36" fillOpacity="0.4" fontFamily="sans-serif">120 mm</text>
+      <text x="330" y="305" textAnchor="middle" fontSize="8" fill="#B8872A" fontFamily="sans-serif" letterSpacing="1" fontWeight="600">DOCUMENTATION</text>
     </svg>
   );
 }
 
 /* ─────────────────────────────────────────────
    SVG Illustration 2 — MRO Consumables
-   Theme: Fluid / chemical storage schematic
 ───────────────────────────────────────────── */
 function ConsumablesIllustration() {
   return (
@@ -88,69 +40,17 @@ function ConsumablesIllustration() {
         </pattern>
       </defs>
       <rect width="400" height="360" fill="url(#grid2)" rx="16"/>
-
-      {/* Large drum / canister */}
       <rect x="148" y="90" width="72" height="160" rx="8" stroke="#0E1C36" strokeWidth="2" fill="white"/>
-      {/* Fill level indicator */}
-      <rect x="148" y="170" width="72" height="80" rx="0" fill="#0E1C36" fillOpacity="0.06"/>
       <line x1="148" y1="170" x2="220" y2="170" stroke="#B8872A" strokeWidth="1.5"/>
-      {/* Drum markings */}
-      {[110, 130, 150, 170, 190, 210, 230].map((y, i) => (
-        <line key={i} x1="152" y1={y} x2={i % 2 === 0 ? 168 : 162} y2={y} stroke="#0E1C36" strokeWidth="1" strokeOpacity="0.4"/>
-      ))}
-      {/* Cap */}
       <rect x="160" y="82" width="48" height="12" rx="3" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <rect x="174" y="76" width="20" height="8" rx="2" stroke="#B8872A" strokeWidth="1.5" fill="white"/>
-      {/* Label area */}
-      <rect x="156" y="196" width="56" height="36" rx="3" stroke="#B8872A" strokeWidth="1" fill="none"/>
-      <text x="184" y="211" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="600">MIL-PRF</text>
-      <text x="184" y="224" textAnchor="middle" fontSize="7" fill="#B8872A" fontFamily="sans-serif" fontWeight="700">APPROVED</text>
-      {/* Base rail */}
-      <rect x="132" y="250" width="104" height="10" rx="3" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-
-      {/* Small container left */}
-      <rect x="68" y="160" width="46" height="90" rx="6" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <rect x="78" y="154" width="26" height="10" rx="3" stroke="#0E1C36" strokeWidth="1" fill="white"/>
-      <rect x="68" y="205" width="46" height="45" rx="0" fill="#0E1C36" fillOpacity="0.05"/>
-      <line x1="68" y1="205" x2="114" y2="205" stroke="#B8872A" strokeWidth="1"/>
-
-      {/* Small container right */}
-      <rect x="286" y="160" width="46" height="90" rx="6" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <rect x="296" y="154" width="26" height="10" rx="3" stroke="#0E1C36" strokeWidth="1" fill="white"/>
-      <rect x="286" y="220" width="46" height="30" rx="0" fill="#0E1C36" fillOpacity="0.05"/>
-      <line x1="286" y1="220" x2="332" y2="220" stroke="#B8872A" strokeWidth="1"/>
-
-      {/* Connecting pipes */}
-      <path d="M 114 195 Q 148 195 148 195" stroke="#0E1C36" strokeWidth="1.5" strokeDasharray="3 2"/>
-      <path d="M 220 195 Q 254 195 286 195" stroke="#0E1C36" strokeWidth="1.5" strokeDasharray="3 2"/>
-
-      {/* Classification labels */}
       <rect x="30" y="270" width="90" height="22" rx="3" fill="#0E1C36"/>
       <text x="75" y="285" textAnchor="middle" fontSize="8" fill="#B8872A" fontFamily="sans-serif" letterSpacing="0.5" fontWeight="600">SPEC VERIFIED</text>
-
-      <rect x="280" y="270" width="90" height="22" rx="3" fill="#0E1C36"/>
-      <text x="325" y="285" textAnchor="middle" fontSize="8" fill="#B8872A" fontFamily="sans-serif" letterSpacing="0.5" fontWeight="600">OEM APPROVED</text>
-
-      {/* Fastener illustration top-right */}
-      <circle cx="330" cy="90" r="22" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <circle cx="330" cy="90" r="12" stroke="#B8872A" strokeWidth="1.5"/>
-      <line x1="316" y1="90" x2="344" y2="90" stroke="#0E1C36" strokeWidth="3" strokeLinecap="round"/>
-      <line x1="330" y1="76" x2="330" y2="104" stroke="#0E1C36" strokeWidth="3" strokeLinecap="round"/>
-
-      {/* Sealant tube top-left */}
-      <ellipse cx="70" cy="90" rx="20" ry="40" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <ellipse cx="70" cy="68" rx="8" ry="6" stroke="#B8872A" strokeWidth="1.5" fill="white"/>
-      <line x1="70" y1="62" x2="70" y2="52" stroke="#B8872A" strokeWidth="2" strokeLinecap="round"/>
-      {[78,90,102,114,122].map((y,i) => (
-        <line key={i} x1="50" y1={y} x2="90" y2={y} stroke="#0E1C36" strokeWidth="0.8" strokeOpacity="0.2"/>
-      ))}
     </svg>
   );
 }
 
 /* ─────────────────────────────────────────────
-   SVG Illustration 3 — Expendables & Hardware
-   Theme: Hardware / fastener / seal schematic
+   SVG Illustration 3 — Expendables
 ───────────────────────────────────────────── */
 function ExpendablesIllustration() {
   return (
@@ -161,216 +61,76 @@ function ExpendablesIllustration() {
         </pattern>
       </defs>
       <rect width="400" height="360" fill="url(#grid3exp)" rx="16"/>
-
-      {/* O-ring / seal — top left */}
       <circle cx="90" cy="100" r="38" stroke="#0E1C36" strokeWidth="2" fill="white"/>
       <circle cx="90" cy="100" r="24" stroke="#B8872A" strokeWidth="2.5"/>
-      <circle cx="90" cy="100" r="10" stroke="#0E1C36" strokeWidth="1" strokeOpacity="0.3" fill="white"/>
-      <text x="90" y="158" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="600" fillOpacity="0.6">O-RING</text>
-
-      {/* Bolt — top center */}
       <rect x="176" y="44" width="28" height="56" rx="4" stroke="#0E1C36" strokeWidth="2" fill="white"/>
       <rect x="168" y="44" width="44" height="14" rx="3" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      {[60,70,80,90].map((y,i) => (
-        <line key={i} x1="180" y1={y} x2="204" y2={y} stroke="#0E1C36" strokeWidth="0.7" strokeOpacity="0.25"/>
-      ))}
-      <rect x="182" y="100" width="16" height="30" rx="2" stroke="#B8872A" strokeWidth="1.5" fill="white"/>
-      <text x="190" y="144" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="600" fillOpacity="0.6">BOLT</text>
-
-      {/* Filter element — top right */}
       <rect x="292" y="56" width="60" height="80" rx="8" stroke="#0E1C36" strokeWidth="2" fill="white"/>
-      {[74,84,94,104,114,124].map((y,i) => (
-        <line key={i} x1="298" y1={y} x2="346" y2={y} stroke="#0E1C36" strokeWidth="0.8" strokeOpacity="0.3"/>
-      ))}
-      <circle cx="322" cy="56" r="8" stroke="#B8872A" strokeWidth="1.5" fill="white"/>
-      <line x1="322" y1="48" x2="322" y2="40" stroke="#B8872A" strokeWidth="1.5"/>
-      <text x="322" y="152" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="600" fillOpacity="0.6">FILTER</text>
-
-      {/* Gasket — center left */}
-      <rect x="44" y="196" width="90" height="44" rx="6" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <rect x="56" y="208" width="66" height="20" rx="3" stroke="#B8872A" strokeWidth="1.5" fill="none"/>
-      <line x1="56" y1="218" x2="122" y2="218" stroke="#0E1C36" strokeWidth="0.8" strokeOpacity="0.3"/>
-      <text x="89" y="256" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="600" fillOpacity="0.6">GASKET</text>
-
-      {/* Electrical connector — center */}
-      <rect x="154" y="190" width="92" height="56" rx="6" stroke="#0E1C36" strokeWidth="2" fill="white"/>
-      {[[168,206],[180,206],[192,206],[204,206],[216,206],[168,222],[180,222],[192,222],[204,222],[216,222]].map(([x,y],i) => (
-        <circle key={i} cx={x} cy={y} r="4" stroke="#B8872A" strokeWidth="1.2" fill="white"/>
-      ))}
-      <line x1="154" y1="218" x2="246" y2="218" stroke="#0E1C36" strokeWidth="0.6" strokeOpacity="0.2"/>
-      <text x="200" y="262" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="600" fillOpacity="0.6">CONNECTOR</text>
-
-      {/* Locking wire spool — center right */}
-      <circle cx="322" cy="218" r="30" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <circle cx="322" cy="218" r="18" stroke="#B8872A" strokeWidth="1.5" strokeDasharray="5 3"/>
-      <circle cx="322" cy="218" r="6" stroke="#0E1C36" strokeWidth="1.5" fill="white"/>
-      <path d="M 322 188 Q 358 196 352 218" stroke="#B8872A" strokeWidth="1.5" strokeLinecap="round"/>
-      <text x="322" y="262" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="600" fillOpacity="0.6">LOCK WIRE</text>
-
-      {/* Traceability badge */}
       <rect x="30" y="300" width="110" height="22" rx="3" fill="#0E1C36"/>
       <text x="85" y="315" textAnchor="middle" fontSize="8" fill="#B8872A" fontFamily="sans-serif" letterSpacing="0.5" fontWeight="600">CERT & TRACEABLE</text>
-
-      {/* OEM tag */}
-      <rect x="260" y="300" width="110" height="22" rx="3" fill="#0E1C36"/>
-      <text x="315" y="315" textAnchor="middle" fontSize="8" fill="#B8872A" fontFamily="sans-serif" letterSpacing="0.5" fontWeight="600">OEM APPROVED</text>
     </svg>
   );
 }
 
 /* ─────────────────────────────────────────────
-   SVG Illustration 4 — Rotables Management
-   Theme: Circular repair cycle diagram
-───────────────────────────────────────────── */
-function RotablesIllustration() {
-  return (
-    <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-[420px] mx-auto select-none">
-      <defs>
-        <pattern id="grid4" width="24" height="24" patternUnits="userSpaceOnUse">
-          <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#0E1C36" strokeWidth="0.4" strokeOpacity="0.1"/>
-        </pattern>
-      </defs>
-      <rect width="400" height="360" fill="url(#grid4)" rx="16"/>
-
-      {/* Outer cycle ring */}
-      <circle cx="200" cy="180" r="130" stroke="#0E1C36" strokeWidth="1.5" strokeOpacity="0.15"/>
-      <circle cx="200" cy="180" r="115" stroke="#0E1C36" strokeWidth="1" strokeDasharray="6 4" strokeOpacity="0.3"/>
-
-      {/* Gold progress arc — 3/4 of circle */}
-      <path
-        d="M 200 65 A 115 115 0 1 1 84 267"
-        stroke="#B8872A" strokeWidth="3" strokeLinecap="round"
-      />
-
-      {/* Arrow head at end of arc */}
-      <polygon points="78,258 94,274 78,280" fill="#B8872A"/>
-
-      {/* Centre hub */}
-      <circle cx="200" cy="180" r="46" fill="#0E1C36"/>
-      <circle cx="200" cy="180" r="38" stroke="#B8872A" strokeWidth="1" strokeOpacity="0.4" fill="none"/>
-      <text x="200" y="175" textAnchor="middle" fontSize="9" fill="#B8872A" fontFamily="sans-serif" fontWeight="600" letterSpacing="1">ROTABLE</text>
-      <text x="200" y="190" textAnchor="middle" fontSize="9" fill="white" fontFamily="sans-serif" fontWeight="400" fillOpacity="0.7">CYCLE</text>
-
-      {/* Stage nodes at 12, 3, 6, 9 o'clock positions */}
-      {/* Top — Remove */}
-      <circle cx="200" cy="65" r="20" fill="white" stroke="#0E1C36" strokeWidth="2"/>
-      <text x="200" y="61" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="700">REMOVE</text>
-      <text x="200" y="72" textAnchor="middle" fontSize="7" fill="#B8872A" fontFamily="sans-serif">&amp; SHIP</text>
-
-      {/* Right — Repair */}
-      <circle cx="315" cy="180" r="20" fill="white" stroke="#0E1C36" strokeWidth="2"/>
-      <text x="315" y="176" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="700">REPAIR</text>
-      <text x="315" y="187" textAnchor="middle" fontSize="7" fill="#B8872A" fontFamily="sans-serif">SHOP</text>
-
-      {/* Bottom — Certify */}
-      <circle cx="200" cy="295" r="20" fill="white" stroke="#0E1C36" strokeWidth="2"/>
-      <text x="200" y="291" textAnchor="middle" fontSize="7" fill="#0E1C36" fontFamily="sans-serif" fontWeight="700">CERTIFY</text>
-      <text x="200" y="302" textAnchor="middle" fontSize="7" fill="#B8872A" fontFamily="sans-serif">TAG</text>
-
-      {/* Left — Exchange */}
-      <circle cx="85" cy="180" r="20" fill="#0E1C36" stroke="#B8872A" strokeWidth="2"/>
-      <text x="85" y="176" textAnchor="middle" fontSize="7" fill="white" fontFamily="sans-serif" fontWeight="700">EXCHANGE</text>
-      <text x="85" y="187" textAnchor="middle" fontSize="7" fill="#B8872A" fontFamily="sans-serif">POOL</text>
-
-      {/* Small diagonal markers on ring */}
-      {[30, 60, 120, 150, 210, 240, 270, 300, 330].map((deg, i) => {
-        const rad = (deg * Math.PI) / 180;
-        const r = 115;
-        return (
-          <circle key={i} cx={200 + r * Math.sin(rad)} cy={180 - r * Math.cos(rad)} r="2.5" fill="#0E1C36" fillOpacity="0.25"/>
-        );
-      })}
-
-      {/* AOG tag badge */}
-      <rect x="296" y="36" width="72" height="22" rx="11" fill="#B8872A"/>
-      <text x="332" y="51" textAnchor="middle" fontSize="9" fill="white" fontFamily="sans-serif" fontWeight="700" letterSpacing="1">AOG READY</text>
-    </svg>
-  );
-}
-
-/* ─────────────────────────────────────────────
-   Bullet point component
+   Bullet Component
 ───────────────────────────────────────────── */
 function Bullet({ text }) {
   return (
-    <li className="flex items-start gap-3">
-      <span className="mt-[5px] flex-shrink-0">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M2 7L6 11L12 3" stroke="#B8872A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <li className="flex items-start gap-4">
+      <span className="mt-[6px] shrink-0">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <circle cx="6" cy="6" r="4.5" stroke="#B8872A" strokeWidth="1.5"/>
+          <circle cx="6" cy="6" r="1.5" fill="#B8872A"/>
         </svg>
       </span>
-      <span className="text-[#374151] leading-relaxed">{text}</span>
+      <span className="text-[#374151] leading-relaxed text-sm font-medium">{text}</span>
     </li>
   );
 }
 
 /* ─────────────────────────────────────────────
-   Reusable Section component
-   reversed=true → illustration on right (text left)
-   paragraph prop → optional descriptive text block
+   Reusable Service Section
 ───────────────────────────────────────────── */
-function ServiceSection({ id, bg, illustration, title, paragraph, bullets, reversed = false }) {
+function ServiceSection({ id, bg, illustration, title, highlight, paragraph, bullets, reversed = false }) {
   return (
-    <section id={id} style={{ backgroundColor: bg }} className="py-20">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-16 lg:gap-20`}>
-
-          {/* Illustration */}
-          <FadeIn className="w-full lg:w-[45%] flex-shrink-0">
-            <div className="relative">
-              <div
-                className="absolute inset-0 rounded-3xl"
-                style={{ background: "radial-gradient(ellipse at center, rgba(184,135,42,0.08) 0%, transparent 70%)" }}
-              />
-              {illustration}
+    <section id={id} style={{ backgroundColor: bg }} className="py-16 md:py-24 border-b border-black/5">
+      <div className="section-container">
+        <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} items-start gap-12 md:gap-20`}>
+          
+          {/* Illustration Content */}
+          <FadeIn className="w-full lg:w-[40%] flex-shrink-0">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-[#0E1C36]/5 rounded-3xl -rotate-1 group-hover:rotate-0 transition-transform duration-500" />
+              <div className="relative bg-white border border-[#0E1C36]/10 rounded-3xl p-6 shadow-sm overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#B8872A]/5 rounded-full blur-2xl" />
+                {illustration}
+              </div>
+              {/* Technical stat label */}
+              <div className="absolute -bottom-6 -right-6 md:right-10 bg-[#0E1C36] text-white p-6 rounded-2xl shadow-2xl border border-white/10 hidden md:block">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#B8872A] font-bold mb-1">Scope Availability</p>
+                <p className="text-xl font-bold font-rajdhani">{highlight}</p>
+              </div>
             </div>
           </FadeIn>
 
-          {/* Text block */}
-          <FadeIn delay={120} className="flex-1 text-center lg:text-left">
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 mb-5 justify-center lg:justify-start">
-              <span className="block w-6 h-px bg-[#B8872A]" />
-              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#B8872A]">
-                Aviation Services
-              </span>
+          {/* Text Content */}
+          <FadeIn delay={150} className="flex-1">
+            <div className="inline-flex items-center gap-2 mb-6 uppercase tracking-[0.3em] font-bold text-[10px] text-[#B8872A]">
+              <span className="w-8 h-px bg-[#B8872A]" />
+              Technical Capability
             </div>
-
-            {/* Title */}
-            <h2
-              className="text-3xl sm:text-4xl font-bold mb-6 leading-tight"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif", color: "#0E1C36" }}
-            >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0E1C36] mb-8 leading-[1.1] tracking-tight">
               {title}
             </h2>
-
-            {/* Optional paragraph */}
-            {paragraph && (
-              <p className="text-[#374151] leading-relaxed mb-8 text-left">
-                {paragraph}
-              </p>
-            )}
-
-            {/* Bullets */}
-            <ul className="space-y-4 mb-10 text-left">
+            <p className="text-[#374151] text-lg leading-relaxed mb-10 font-medium opacity-90 border-l-4 border-[#B8872A] pl-8 py-2 bg-[#B8872A]/5 rounded-r-xl">
+              {paragraph}
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-10 mb-10">
               {bullets.map((b) => <Bullet key={b} text={b} />)}
             </ul>
-
-            {/* CTA link */}
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 font-semibold text-sm group"
-              style={{ color: "#B8872A" }}
-            >
-              <span className="border-b border-[#B8872A]/40 group-hover:border-[#B8872A] transition-all">
-                Enquire Now
-              </span>
-              <svg
-                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
+            <Link href="/contact" className="btn-navy-outline px-10 py-5 text-sm">
+              Request Technical Offer
             </Link>
           </FadeIn>
         </div>
@@ -379,131 +139,160 @@ function ServiceSection({ id, bg, illustration, title, paragraph, bullets, rever
   );
 }
 
-/* ─────────────────────────────────────────────
-   Services Page
-───────────────────────────────────────────── */
 export const metadata = {
-  title: 'Aviation Parts & MRO Consumables Supplier | Purvi Aero International FZC',
-  description: 'Aircraft spares, MRO consumables, sealants, hydraulic fluids, fasteners, rotables and expendables supplied with full traceability documentation. Based in Dubai, UAE.',
-  openGraph: {
-    title: 'Aviation Parts & MRO Consumables Supplier | Purvi Aero International FZC',
-    description: 'Aircraft spares, MRO consumables, sealants, hydraulic fluids, fasteners, rotables and expendables supplied with full traceability documentation. Based in Dubai, UAE.',
-  },
+  title: 'Aviation Parts & Procurement Capabilities | Purvi Aero International FZC',
+  description: 'Technical sourcing for aircraft spares, MRO consumables, chemicals, expendables and rotables. End-to-end procurement solutions for global aviation operators.',
 };
 
 export default function ServicesPage() {
   return (
     <main>
-      {/* ── PAGE HERO ── */}
-      <div className="bg-[#0E1C36] py-20 text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase mb-4" style={{ color: "#B8872A" }}>
-            What We Supply
-          </p>
-          <h1
-            className="text-4xl sm:text-5xl font-bold text-white mb-5"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-          >
-            Our Services
-          </h1>
-          <p className="text-white/60 text-lg leading-relaxed max-w-xl mx-auto">
-            End-to-end aviation supply solutions — from certified components to consumables and managed rotable programmes.
-          </p>
+      {/* ── HERO ── */}
+      <section className="bg-[#0E1C36] py-16 md:py-32 text-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M54.826 10.511L31.247 2.448c-.812-.28-1.682-.28-2.494 0L5.174 10.511c-.71.243-1.174.912-1.174 1.664v35.65c0 .752.464 1.421 1.174 1.664l23.579 8.063c.406.14.83.21 1.253.21s.847-.07 1.253-.21l23.579-8.063c.71-.243 1.174-.912 1.174-1.664V12.175c0-.752-.464-1.421-1.174-1.664zM30 5.17l21.175 7.243L30 19.656 8.825 12.413 30 5.17zM6 14.281l23 7.872V52.28L6 44.408V14.281zm48 30.127l-23 7.872V22.153l23-7.872v30.127z\" fill=\"%23B8872A\" fill-opacity=\"1\" fill-rule=\"evenodd\"/%3E%3C/svg%3E')" }} />
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
+          <FadeIn>
+            <span className="eyebrow !text-[#B8872A] mb-8 justify-center">Strategic Sourcing</span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-8 tracking-tighter">
+              Procurement <span className="text-[#B8872A]">Verticals</span>
+            </h1>
+            <p className="text-white/70 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-medium mb-12 italic">
+              "Managing the technical complexities of aviation procurement with institutional rigor and operational speed."
+            </p>
+            <div className="flex justify-center gap-6">
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold text-white font-rajdhani">24hr</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#B8872A] font-bold">RFQ Target</span>
+              </div>
+              <div className="w-px h-12 bg-white/10" />
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold text-white font-rajdhani">100%</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#B8872A] font-bold">Trace Check</span>
+              </div>
+            </div>
+          </FadeIn>
         </div>
-      </div>
+      </section>
 
-      {/* ── SECTION 1: Aircraft Spares & Components — white, illustration left ── */}
+      {/* ── CAPABILITY TIERS ── */}
       <ServiceSection
         id="aircraft-spares"
         bg="#FFFFFF"
         illustration={<SparesIllustration />}
-        title="Aircraft Spares & Components"
+        title="Spares & Line Components"
+        highlight="GLOBAL POOL ACCESS"
+        paragraph="Direct support for rotables and line components for commercial and regional platforms. We utilize an audited supplier network to source components with firm airworthiness standing."
         bullets={[
-          "Rotables and expendables",
-          "Overhauled and serviceable units",
-          "Manufacturer and PMA parts",
-          "Full 8130 / EASA Form 1 documentation",
+          "Engine & APU Components (OEM/OH)",
+          "Flight Control & Landing Gear Spares",
+          "Avionics & Communication Hardware",
+          "Interior Components & Gallery Spares",
+          "Technical Alternate Parity Reviews",
+          "FAA 8130-3 / EASA Form 1 Certification",
         ]}
         reversed={false}
       />
 
-      {/* ── SECTION 2: MRO Consumables & Chemicals — cream, text left, illustration right ── */}
       <ServiceSection
         id="mro-consumables"
-        bg="#F5F1E8"
+        bg="#F9FAFB"
         illustration={<ConsumablesIllustration />}
-        title="MRO Consumables & Chemicals"
-        paragraph="Our consumables range covers the full spectrum of day-to-day MRO requirements — from approved sealants and adhesives to hydraulic fluids, lubricants, corrosion inhibitors, and cleaning agents. All products are sourced from OEM-approved manufacturers with full batch traceability and shelf-life documentation."
+        title="Technical Chemicals & Fluids"
+        highlight="SPEC-LOCKED SUPPLY"
+        paragraph="Handling the technical compliance requirements for aerospace chemicals and fluids. Our team monitors batch trace, cure-dates, and technical spec parity for every shipment."
         bullets={[
-          "Sealants, adhesives and compounds",
-          "Hydraulic and lubricating fluids",
-          "Cleaning agents and surface treatments",
-          "Corrosion inhibitors and primers",
-          "Fasteners, hardware and fittings",
-          "Approved manufacturer sourcing with full SDS documentation",
+          "MIL-SPEC Lubricants & Hydraulic Fluids",
+          "Aerospace Sealants & Structural Adhesives",
+          "Technical Cleaning Solutions & Degreasers",
+          "Batch Certification & Trace Visibility",
+          "SDS & Hazmat Compliance Management",
+          "Cold-Chain & Specialized Storage Monitoring",
         ]}
         reversed={true}
       />
 
-      {/* ── SECTION 3: Expendables & Hardware — white, illustration left ── */}
       <ServiceSection
         id="expendables-hardware"
         bg="#FFFFFF"
         illustration={<ExpendablesIllustration />}
         title="Expendables & Hardware"
-        paragraph="Expendable components are the backbone of every maintenance event. We stock and source a comprehensive range of hardware, seals, gaskets, filters, and structural expendables — all certified and traceable to approved sources."
+        highlight="BULK TRACEABILITY"
+        paragraph="Optimizing the supply of high-usage expendables and structural hardware for base maintenance and heavy checks (C & D). We focus on line-item granularity and documentation."
         bullets={[
-          "O-rings, seals and gaskets",
-          "Filters and filter elements",
-          "Structural fasteners and bolts",
-          "Electrical connectors and terminals",
-          "Locking wire, split pins and safety items",
-          "Certification and traceability on every line item",
+          "AN, MS, NAS & Boeing Standard Fasteners",
+          "Technical O-Rings, Seals & Gaskets",
+          "Pneumatic & Hydraulic Filter Elements",
+          "High-Usage Bulk Expendables Packages",
+          "Kitting Services for Maintenance Events",
+          "Manufacturer CoC Documentation Standards",
         ]}
         reversed={false}
       />
 
-      {/* ── SECTION 4: Rotables Management — cream, text left, illustration right ── */}
-      <ServiceSection
-        id="rotables-management"
-        bg="#F5F1E8"
-        illustration={<RotablesIllustration />}
-        title="Rotables Management"
-        bullets={[
-          "Exchange and loan pool access",
-          "Repair cycle management",
-          "Certified serviceable tags",
-          "AOG and priority support",
-        ]}
-        reversed={true}
-      />
-
-      {/* ── BOTTOM CTA BAND ── */}
-      <div className="bg-[#0E1C36] py-20 text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <p
-            className="text-2xl sm:text-3xl font-bold text-white mb-4"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-          >
-            Need a specific part or service?
-          </p>
-          <p className="text-white/60 mb-8">
-            Send us your requirement and we will respond within hours.
-          </p>
-          <Link
-            href="/contact"
-            className="btn-gold group inline-flex items-center gap-2"
-          >
-            <span>Send a Request</span>
-            <svg
-              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </Link>
+      {/* ── WHY BUYERS WORK WITH US (Trust Section) ── */}
+      <section className="bg-[#0E1C36] py-16 md:py-24 text-white relative overflow-hidden">
+        <div className="section-container relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-center">
+            <FadeIn>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">Why Sourcing Teams <br/><span className="text-[#B8872A]">Choose Purvi Aero</span></h2>
+              <div className="space-y-8">
+                {[
+                  { title: "Defensible Airworthiness", desc: "Every component is vetted for documentation parity, ensuring technically sound units for your fleet." },
+                  { title: "Rapid Commercial Bids", desc: "Our prioritized RFQ desk targets sub-24hr turnaround for standard spare quotes." },
+                  { title: "Logistical Rigor", desc: "Strategic dispatch from international hubs to minimize grounded time (AOG Support)." },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6">
+                    <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-[#B8872A] transition-colors">
+                      <span className="text-[#B8872A] font-bold font-rajdhani text-lg">0{i+1}</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">{item.title}</h4>
+                      <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+            <FadeIn delay={200} className="bg-white p-10 md:p-14 rounded-[3rem] text-[#0E1C36]">
+              <h3 className="text-2xl font-bold mb-8 tracking-tight">Platform Expertise</h3>
+              <p className="text-[#374151] font-medium mb-10 opacity-80 italic">"Providing specialized technical sourcing support for the world's most critical airframes and powerplants."</p>
+              <div className="grid grid-cols-2 gap-y-8 gap-x-12">
+                {[
+                  { label: "Boeing", sub: "737 Series / 777" },
+                  { label: "Airbus", sub: "A320 Family / A330" },
+                  { label: "Regional", sub: "ATR / Dash-8 / Embraer" },
+                  { label: "Propulsion", sub: "CFM56 / V2500 / PW" },
+                ].map((fleet, idx) => (
+                  <div key={idx}>
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#B8872A] mb-1">{fleet.label}</p>
+                    <p className="text-lg font-extrabold tracking-tight">{fleet.sub}</p>
+                  </div>
+                ))}
+              </div>
+              <Link href="/contact" className="mt-12 btn-gold w-full text-center">Start Capability Review</Link>
+            </FadeIn>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* ── RFQ CTA ── */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="section-container text-center">
+          <FadeIn className="max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0E1C36] mb-8">Ready for Quote?</h2>
+            <p className="text-[#374151] text-lg font-medium opacity-80 mb-12 leading-relaxed">
+              Experience the efficiency of a dedicated technical sourcing partner. Submit your requirement lists directly to our intake desk for immediate processing.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-gold px-12 py-5 text-lg">Submit Requirement List</Link>
+              <div className="text-left px-6 py-4 bg-[#F9FAFB] rounded-2xl border border-[#0E1C36]/5">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-[#B8872A] mb-1">Direct Intake</p>
+                <p className="text-sm font-bold text-[#0E1C36]">rfq@purviaero.com</p>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
     </main>
   );
 }

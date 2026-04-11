@@ -26,11 +26,19 @@ export default function FadeIn({ as: Tag = "div", delay = 0, className = "", chi
           observer.unobserve(el);
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0.05 }
     );
 
+    // Safety fallback: ensure visibility after 2 seconds regardless of scroll
+    const timeout = setTimeout(() => {
+      el.classList.add("is-visible");
+    }, 2000);
+
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (

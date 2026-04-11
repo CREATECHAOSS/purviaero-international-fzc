@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 const NAV_LINKS = [
   { href: "/",         label: "Home"     },
   { href: "/services", label: "Services" },
-  { href: "/about",    label: "About"    },
+  { href: "/aog",      label: "AOG Support" },
+  { href: "/about",    label: "About Us" },
   { href: "/contact",  label: "Contact"  },
 ];
 
@@ -26,17 +27,29 @@ const Navbar = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-baseline font-rajdhani whitespace-nowrap group"
+            className="flex items-center gap-4 group"
           >
-            <span style={{ fontWeight: 700, color: "#B8872A", fontSize: "16px", letterSpacing: "2px" }}>
-              PURVI
-            </span>
-            <span style={{ fontWeight: 700, color: "#FFFFFF", fontSize: "16px", letterSpacing: "2px", marginLeft: "4px" }}>
-              AERO
-            </span>
-            <span style={{ fontWeight: 400, color: "rgba(255,255,255,0.55)", fontSize: "11px", letterSpacing: "3px", marginLeft: "4px" }}>
-              INTERNATIONAL
-            </span>
+            {/* Geometric Lockup Icon */}
+            <div className="flex gap-1.5 h-7">
+              <div className="w-1 h-full bg-[#B8872A] rounded-full" />
+              <div className="w-1 h-[80%] my-auto bg-[#B8872A]/70 rounded-full" />
+              <div className="w-1 h-[60%] my-auto bg-[#B8872A]/40 rounded-full" />
+            </div>
+            
+            <div className="flex flex-col">
+              <span 
+                className="text-lg font-extrabold tracking-[0.05em] text-white leading-none"
+                style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+              >
+                PURVI AERO
+              </span>
+              <span 
+                className="text-[9px] font-bold tracking-[0.35em] text-white/40 leading-none mt-1.5 uppercase"
+                style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+              >
+                INTERNATIONAL FZC
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -60,9 +73,9 @@ const Navbar = () => {
             ))}
             <Link
               href="/contact"
-              className="ml-2 bg-[#B8872A] text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-[#A17624] transition-all duration-300 hover:scale-105 shadow-md hover:shadow-[#B8872A]/30"
+              className="ml-2 bg-[#B8872A] text-white text-[13px] font-bold uppercase tracking-widest px-8 py-3.5 rounded-xl hover:bg-[#A17624] transition-all duration-300 hover:scale-[1.02] shadow-xl hover:shadow-[#B8872A]/30 border border-[#B8872A]/20"
             >
-              Get a Quote
+              Submit RFQ
             </Link>
           </div>
 
@@ -104,9 +117,9 @@ const Navbar = () => {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block mt-3 px-4 py-3 rounded-lg text-sm font-semibold bg-[#B8872A] text-white text-center hover:bg-[#A17624] transition-colors"
+              className="block mt-3 px-4 py-4 rounded-xl text-sm font-bold uppercase tracking-widest bg-[#B8872A] text-white text-center hover:bg-[#A17624] transition-colors"
             >
-              Get a Quote
+              Submit RFQ
             </Link>
           </div>
         </div>

@@ -1,0 +1,14 @@
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Precise Geometric Icon: Minimalist Wing/Blade Pitch Concept -->
+  <g transform="translate(0, 15)">
+    <rect x="0" y="0" width="4" height="30" rx="1" fill="#B8872A" />
+    <rect x="10" y="4" width="4" height="22" rx="1" fill="#B8872A" fill-opacity="0.7" />
+    <rect x="20" y="8" width="4" height="14" rx="1" fill="#B8872A" fill-opacity="0.4" />
+  </g>
+
+  <!-- Typeface Branding -->
+  <g transform="translate(40, 24)">
+    <text x="0" y="0" font-family="var(--font-outfit), sans-serif" font-weight="800" font-size="20" letter-spacing="0.05em" fill="#0E1C36">PURVI AERO</text>
+    <text x="0" y="14" font-family="var(--font-outfit), sans-serif" font-weight="400" font-size="9" letter-spacing="0.3em" fill="#0E1C36" fill-opacity="0.5">INTERNATIONAL FZC</text>
+  </g>
+</svg>

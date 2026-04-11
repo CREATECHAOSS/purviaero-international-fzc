@@ -1,112 +1,129 @@
+import Link from 'next/link';
+import FadeIn from '@/components/FadeIn';
+
 export const metadata = {
-  title: '24/7 AOG Desk | Purvi Aero International FZC',
-  description: 'Aircraft on ground? Our dedicated AOG desk operates 24/7/365 to expedite critical aviation spares directly to your facility.',
+  title: 'Priority AOG Support | Purvi Aero International FZC',
+  description: 'Aircraft on ground? Our dedicated team provides priority support to expedite critical aviation spares directly to your facility. rfq@purviaero.com',
 };
 
 const protocol = [
   {
     step: '01',
-    title: 'Immediate Inventory Check',
-    desc: 'Our specialists instantly cross-reference your part requirement against our global supplier network and bonded stores.',
+    title: 'Rapid Stock Verification',
+    desc: 'Our specialists instantly cross-reference your part requirements against our own inventory and verified supplier networks.',
   },
   {
     step: '02',
-    title: 'Rapid Certification Review',
-    desc: 'Airworthiness documentation is verified instantly — 8130-3, EASA Form 1, or DGCA as required.',
+    title: 'Technical Trace Audit',
+    desc: 'Every AOG line is vetted for airworthiness documentation (FAA 8130-3 / EASA Form 1) to ensure zero delays at receiving.',
   },
   {
     step: '03',
-    title: 'Next-Flight-Out (NFO) Dispatch',
-    desc: 'We arrange NFO courier or air freight to ensure your part arrives at your gate with maximum speed.',
+    title: 'Next-Flight-Out Logisitics',
+    desc: 'Priority coordination through NFO courier or express air freight to minimize transit time to your location or hangar.',
   },
 ];
 
 export default function AOGPage() {
   return (
-    <>
-      {/* Dark Hero */}
-      <section className="bg-dark relative overflow-hidden border-b border-white/5">
-        {/* Subtle grid pattern */}
+    <main className="bg-[#0E1C36]">
+      {/* ── HIGH-URGENCY HERO ── */}
+      <section className="relative overflow-hidden pt-24 pb-32 md:pt-32 md:pb-40 border-b border-white/5">
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 pointer-events-none opacity-[0.03]"
           style={{
-            backgroundImage: `linear-gradient(to right, #8B949E 1px, transparent 1px),
-                              linear-gradient(to bottom, #8B949E 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(to right, #FFFFFF 1px, transparent 1px),
+                              linear-gradient(to bottom, #FFFFFF 1px, transparent 1px)`,
             backgroundSize: '48px 48px',
           }}
         />
-        {/* Accent glow */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/20 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div 
+          className="absolute top-0 right-0 w-[800px] h-[800px] pointer-events-none opacity-20"
+          style={{ background: "radial-gradient(ellipse at center, rgba(184,135,42,0.15) 0%, transparent 70%)", transform: "translate(30%, -30%)" }}
+        />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-28 md:py-40">
-          <div className="flex flex-col items-start max-w-3xl">
-            <span className="inline-flex items-center gap-3 bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full mb-10 border border-accent/20 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              AOG Desk — Active 24/7/365
+        <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <FadeIn className="flex flex-col items-start max-w-3xl">
+            <span className="inline-flex items-center gap-3 bg-[#B8872A]/20 text-white text-[10px] font-bold uppercase tracking-[0.25em] px-5 py-2.5 rounded-full mb-10 border border-[#B8872A]/40 backdrop-blur-md">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+              </span>
+              Critical AOG Support
             </span>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-heading font-black text-white leading-tight">
-              Aircraft On Ground?<br/>
-              <span className="text-accent italic">We Are On It.</span>
-            </h1>
-            <p className="mt-8 text-gray-400 text-xl leading-relaxed max-w-2xl font-medium">
-              Every minute grounded impacts your bottom line. Our dedicated AOG desk operates around the clock to expedite critical spares directly to your facility.
-            </p>
-            <a
-              href="tel:+919820603873"
-              className="mt-12 inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-dark font-black text-lg px-12 py-5 rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(14,207,176,0.4)] group tracking-tight"
+            <h1 
+              className="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tighter"
+              style={{ fontFamily: "var(--font-outfit), sans-serif" }}
             >
-              <svg className="w-6 h-6 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-              </svg>
-              Call AOG Hotline Now
-            </a>
-          </div>
+              Aircraft On <br className="hidden md:block"/> Ground? <br/>
+              <span className="text-[#B8872A]">We Move Now.</span>
+            </h1>
+            <p className="mt-10 text-white/70 text-xl md:text-2xl leading-relaxed max-w-2xl font-medium border-l-4 border-[#B8872A] pl-8">
+              Every grounded minute impacts your bottom line. Purvi Aero providing prioritized technical sourcing and logistical support for line-critical requirements.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-12 btn-gold px-12 py-5 text-lg shadow-2xl hover:shadow-[#B8872A]/40"
+            >
+              Contact AOG Support Now
+            </Link>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Protocol */}
-      <section className="bg-dark relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-32">
-          <div className="text-center mb-20">
-            <h2 className="section-heading">Our AOG Response Protocol</h2>
-            <p className="mt-5 section-subheading max-w-xl mx-auto">
-              A precise, high-speed execution framework designed to minimize aircraft downtime.
-            </p>
-          </div>
+      {/* ── EXECUTION PROTOCOL ── */}
+      <section className="relative py-20 md:py-32 bg-white rounded-t-[3rem] -mt-12 z-10 shadow-[0_-20px_50px_rgba(0,0,0,0.2)]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <FadeIn className="text-center mb-16 md:mb-24 max-w-2xl mx-auto">
+            <span className="eyebrow">Priority Response Flow</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0E1C36] tracking-tight">Rapid Response Protocol</h2>
+            <p className="mt-6 text-[#374151] font-medium opacity-70">A specialized intake and fulfillment path dedicated to minimizing grounded time for global operators.</p>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {protocol.map((item) => (
-              <div key={item.step} className="card group relative overflow-hidden">
-                <span className="text-[140px] font-heading font-black text-white/5 absolute -bottom-10 -right-5 select-none leading-none group-hover:text-accent/10 transition-colors">
-                  {item.step}
-                </span>
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent font-black text-sm flex items-center justify-center mb-8 border border-accent/20">
-                    {parseInt(item.step)}
-                  </div>
-                  <h3 className="font-heading font-bold text-white text-2xl mb-4 tracking-tight">{item.title}</h3>
-                  <p className="text-gray-400 text-base leading-relaxed">{item.desc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {protocol.map((item, idx) => (
+              <FadeIn key={item.step} delay={idx * 150} className="relative group">
+                <div className="bg-[#F9FAFB] border border-[#0E1C36]/5 p-12 rounded-[2.5rem] transition-all duration-500 hover:bg-white hover:shadow-2xl hover:border-[#B8872A]/20 h-full">
+                  <span className="text-6xl font-black text-[#0E1C36]/5 absolute top-8 right-8 select-none group-hover:text-[#B8872A]/10 transition-colors pointer-events-none italic">
+                    {item.step}
+                  </span>
+                  <h4 className="font-bold text-[#0E1C36] text-2xl mb-5 tracking-tight">{item.title}</h4>
+                  <p className="text-[#374151] text-base leading-relaxed font-medium opacity-80">
+                    {item.desc}
+                  </p>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
-          {/* Bottom CTA strip */}
-          <div className="mt-24 bg-surface border border-white/5 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 blur-3xl rounded-full" />
-            <div className="relative z-10">
-              <p className="text-white font-heading font-bold text-3xl tracking-tight">Don't Let Ground Time Cost You More.</p>
-              <p className="text-gray-500 text-lg mt-3 font-medium">Reach our AOG specialists now — we respond in under 2 minutes.</p>
+          <FadeIn delay={400} className="mt-20 md:mt-32 bg-[#0E1C36] rounded-[2.5rem] p-10 md:p-20 relative overflow-hidden group border border-white/5 shadow-2xl">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#B8872A]/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2 group-hover:bg-[#B8872A]/20 transition-all duration-700" />
+            <div className="relative z-10 flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-12">
+              <div>
+                <span className="block text-[#B8872A] text-xs font-bold uppercase tracking-[0.3em] mb-4">Direct Intake Portal</span>
+                <h4 className="text-3xl sm:text-5xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
+                  Supporting Your <br className="hidden md:block"/> Fleet, Globally.
+                </h4>
+                <p className="text-white/50 text-xl font-medium max-w-md">
+                  Submit your AOG requirement list directly to our intake desk for immediate technical processing.
+                </p>
+              </div>
+              <div className="lg:flex lg:flex-col lg:items-end gap-6">
+                <Link
+                  href="/contact"
+                  className="btn-gold px-12 py-6 text-xl shadow-2xl hover:shadow-[#B8872A]/50 w-full lg:w-auto text-center"
+                >
+                  Submit Priority RFQ
+                </Link>
+                <div className="hidden lg:block text-right">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-1">Emergency Inbox</p>
+                  <p className="text-white font-bold text-lg">rfq@purviaero.com</p>
+                </div>
+              </div>
             </div>
-            <a
-              href="tel:+919820603873"
-              className="flex-shrink-0 relative z-10 btn-primary px-10 py-5 text-base"
-            >
-              Call AOG Hotline
-            </a>
-          </div>
+          </FadeIn>
         </div>
       </section>
-    </>
+    </main>
   );
 }
