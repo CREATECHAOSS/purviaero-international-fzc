@@ -29,6 +29,10 @@ export const metadata = {
   alternates: {
     canonical: './',
   },
+  icons: {
+    icon: '/logo-lockup-white.svg',
+    apple: '/logo-lockup-white.svg',
+  },
 };
 
 export const viewport = {
