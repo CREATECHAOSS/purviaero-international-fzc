@@ -33,27 +33,27 @@ function TurbineSchematic() {
   return (
     <svg viewBox="0 0 480 496" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-[520px] mx-auto select-none opacity-90 transition-opacity hover:opacity-100">
       <defs>
-        <pattern id="eng-grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M 24 0 L 0 0 0 24" fill="none" stroke="#0E1C36" strokeWidth="0.5" /></pattern>
-        <pattern id="eng-grid-major" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse"><rect width="120" height="120" fill="url(#eng-grid)" /><path d="M 120 0 L 0 0 0 120" fill="none" stroke="#0E1C36" strokeWidth="1" /></pattern>
+        <pattern id="eng-grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M 24 0 L 0 0 0 24" fill="none" stroke="#000543" strokeWidth="0.5" /></pattern>
+        <pattern id="eng-grid-major" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse"><rect width="120" height="120" fill="url(#eng-grid)" /><path d="M 120 0 L 0 0 0 120" fill="none" stroke="#000543" strokeWidth="1" /></pattern>
         <clipPath id="panel-clip"><rect x="16" y="16" width="448" height="448" rx="4" /></clipPath>
       </defs>
       <rect x="16" y="16" width="448" height="448" rx="4" fill="url(#eng-grid-major)" fillOpacity="0.10" />
-      <rect x="16" y="16" width="448" height="448" rx="4" stroke="#0E1C36" strokeWidth="1" strokeOpacity="0.18" />
+      <rect x="16" y="16" width="448" height="448" rx="4" stroke="#000543" strokeWidth="1" strokeOpacity="0.18" />
       {[[28, 28], [452, 28], [28, 452], [452, 452]].map(([mx, my], i) => (
         <g key={i}>
-          <line x1={mx} y1={my} x2={mx + (i % 2 === 0 ? 14 : -14)} y2={my} stroke="#B8872A" strokeWidth="1.5" strokeOpacity="0.6" />
-          <line x1={mx} y1={my} x2={mx} y2={my + (i < 2 ? 14 : -14)} stroke="#B8872A" strokeWidth="1.5" strokeOpacity="0.6" />
+          <line x1={mx} y1={my} x2={mx + (i % 2 === 0 ? 14 : -14)} y2={my} stroke="#00999F" strokeWidth="1.5" strokeOpacity="0.6" />
+          <line x1={mx} y1={my} x2={mx} y2={my + (i < 2 ? 14 : -14)} stroke="#00999F" strokeWidth="1.5" strokeOpacity="0.6" />
         </g>
       ))}
-      <circle cx={cx} cy={cy} r="198" stroke="#0E1C36" strokeWidth="1.2" strokeOpacity="0.30" />
-      <circle cx={cx} cy={cy} r="178" stroke="#0E1C36" strokeWidth="1.5" strokeOpacity="0.55" />
+      <circle cx={cx} cy={cy} r="198" stroke="#000543" strokeWidth="1.2" strokeOpacity="0.30" />
+      <circle cx={cx} cy={cy} r="178" stroke="#000543" strokeWidth="1.5" strokeOpacity="0.55" />
       <g clipPath="url(#panel-clip)">
         {blades.map((b, i) => (
-          <path key={i} d={`M ${b.iLx} ${b.iLy} Q ${b.cpLx} ${b.cpLy} ${b.oLx} ${b.oLy} A 178 178 0 0 1 ${b.oTx} ${b.oTy} L ${b.iTx} ${b.iTy} A 52 52 0 0 0 ${b.iLx} ${b.iLy} Z`} fill="#0E1C36" fillOpacity="0.04" stroke="#0E1C36" strokeWidth="1.2" strokeOpacity="0.65" />
+          <path key={i} d={`M ${b.iLx} ${b.iLy} Q ${b.cpLx} ${b.cpLy} ${b.oLx} ${b.oLy} A 178 178 0 0 1 ${b.oTx} ${b.oTy} L ${b.iTx} ${b.iTy} A 52 52 0 0 0 ${b.iLx} ${b.iLy} Z`} fill="#000543" fillOpacity="0.04" stroke="#000543" strokeWidth="1.2" strokeOpacity="0.65" />
         ))}
       </g>
-      <circle cx={cx} cy={cy} r="52" stroke="#B8872A" strokeWidth="1" strokeOpacity="0.40" />
-      <circle cx={cx} cy={cy} r="14" stroke="#0E1C36" strokeWidth="1.5" strokeOpacity="0.80" />
+      <circle cx={cx} cy={cy} r="52" stroke="#0071CE" strokeWidth="1" strokeOpacity="0.40" />
+      <circle cx={cx} cy={cy} r="14" stroke="#000543" strokeWidth="1.5" strokeOpacity="0.80" />
     </svg>
   );
 }
@@ -74,10 +74,10 @@ const SERVICES = [
 ];
 
 const BANNER_ITEMS = [
-  { label: "Global Supplier\nNetwork", icon: <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#B8872A" strokeWidth="1.5"/><path d="M2 12H22" stroke="#B8872A" strokeWidth="1.5"/><path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2617 12 22C9.49872 19.2617 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z" stroke="#B8872A" strokeWidth="1.5"/></svg> },
-  { label: "Full Traceability\nDocumentation", icon: <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#B8872A" strokeWidth="1.5"/><path d="M20 12V17C20 18.6569 18.6569 20 17 20H7C5.34315 20 4 18.6569 4 17V7C4 5.34315 5.34315 4 7 4H12" stroke="#B8872A" strokeWidth="1.5"/><path d="M15 4H20V9" stroke="#B8872A" strokeWidth="1.5"/></svg> },
-  { label: "High-Tempo\nResponse", icon: <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="#B8872A" strokeWidth="1.5"/></svg> },
-  { label: "Enterprise\nAviation", icon: <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M3 10L12 3L21 10V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V10Z" stroke="#B8872A" strokeWidth="1.5"/><path d="M9 21V12H15V21" stroke="#B8872A" strokeWidth="1.5"/></svg> },
+  { label: "Global Supplier\nNetwork", icon: <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#0071CE" strokeWidth="1.5"/><path d="M2 12H22" stroke="#0071CE" strokeWidth="1.5"/><path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2617 12 2C9.49872 19.2617 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z" stroke="#0071CE" strokeWidth="1.5"/></svg> },
+  { label: "Full Traceability\nDocumentation", icon: <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#0071CE" strokeWidth="1.5"/><path d="M20 12V17C20 18.6569 18.6569 20 17 20H7C5.34315 20 4 18.6569 4 17V7C4 5.34315 5.34315 4 7 4H12" stroke="#0071CE" strokeWidth="1.5"/><path d="M15 4H20V9" stroke="#0071CE" strokeWidth="1.5"/></svg> },
+  { label: "High-Tempo\nResponse", icon: <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="#0071CE" strokeWidth="1.5"/></svg> },
+  { label: "Enterprise\nAviation", icon: <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M3 10L12 3L21 10V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V10Z" stroke="#0071CE" strokeWidth="1.5"/><path d="M9 21V12H15V21" stroke="#0071CE" strokeWidth="1.5"/></svg> },
 ];
 
 export const metadata = {
@@ -95,16 +95,16 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-12 text-center lg:text-left">
             <FadeIn className="flex-1">
               <span className="eyebrow">Aviation Sourcing & Technical Support</span>
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-[1.05] font-extrabold mb-8 text-[#0E1C36]">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-[1.05] font-extrabold mb-8 text-primary">
                 Precision Spares <br />
-                <span className="text-[#B8872A]">for Global Fleets</span>
+                <span className="text-secondary">for Global Fleets</span>
               </h1>
-              <p className="text-lg leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 text-[#374151] font-medium border-l-4 border-[#B8872A] pl-6 py-2">
+              <p className="text-lg leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 text-[#374151] font-medium border-l-4 border-accent pl-6 py-2">
                 Providing airlines and MRO operators with a dedicated procurement desk for spares, rotables, and technical consumables. We prioritize operational speed and airworthiness trace for every line item.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link href="/contact" className="btn-gold">Direct RFQ Portal</Link>
-                <Link href="/services" className="btn-navy-outline">Our Capabilities</Link>
+                <Link href="/contact" className="btn-primary">Direct RFQ Portal</Link>
+                <Link href="/services" className="btn-outline">Our Capabilities</Link>
               </div>
             </FadeIn>
             <FadeIn delay={200} className="flex-1 w-full max-w-[500px] lg:max-w-none">
@@ -118,17 +118,17 @@ export default function Home() {
       <section className="bg-[#F9FAFB] py-16 md:py-24 border-t border-black/5">
         <div className="section-container">
           <FadeIn className="text-center mb-16 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0E1C36]">Procurement Scopes</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-primary">Procurement Scopes</h2>
             <p className="mt-4 text-[#374151] font-medium opacity-70">Focusing on high-availability sourcing and rigorous technical compliance across three primary procurement desks.</p>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {SERVICES.map((s, idx) => (
-              <FadeIn key={idx} delay={idx * 150} className="bg-white border border-[#0E1C36]/5 p-10 sm:p-12 rounded-2xl transition-all duration-300 hover:shadow-xl hover:border-[#B8872A]/20 group">
-                <h3 className="text-2xl font-bold mb-6 text-[#0E1C36]">{s.title}</h3>
+              <FadeIn key={idx} delay={idx * 150} className="bg-white border border-primary/5 p-10 sm:p-12 rounded-2xl transition-all duration-300 hover:shadow-xl hover:border-secondary/20 group">
+                <h3 className="text-2xl font-bold mb-6 text-primary">{s.title}</h3>
                 <p className="text-[#374151] font-medium opacity-80 leading-relaxed text-sm">
                   {s.description}
                 </p>
-                <div className="mt-8 h-1 w-12 bg-[#B8872A] opacity-40 group-hover:w-24 transition-all duration-500" />
+                <div className="mt-8 h-1 w-12 bg-accent opacity-40 group-hover:w-24 transition-all duration-500" />
               </FadeIn>
             ))}
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-16 lg:items-center">
             <FadeIn className="lg:w-1/2">
               <span className="eyebrow">Enterprise Fleet Support</span>
-              <h2 className="text-3xl md:text-5xl font-bold text-[#0E1C36] mb-8">Industries & Specialized Hubs</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8">Industries & Specialized Hubs</h2>
               <p className="text-[#374151] text-lg font-medium leading-relaxed mb-10">
                 We act as a mission-critical extension of your procurement team, supporting a diverse range of aviation segments with specialized technical knowledge and logistic hubs.
               </p>
@@ -153,18 +153,18 @@ export default function Home() {
                   { title: "General Aviation", desc: "Technical sourcing for corporate jet components and specialized avionics." },
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#B8872A] mt-2 shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
                     <div>
-                      <h4 className="font-bold text-[#0E1C36] text-sm uppercase tracking-wide mb-1">{item.title}</h4>
+                      <h4 className="font-bold text-primary text-sm uppercase tracking-wide mb-1">{item.title}</h4>
                       <p className="text-xs text-[#374151] opacity-70 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </FadeIn>
-            <FadeIn delay={200} className="lg:w-1/2 bg-[#0E1C36] rounded-3xl p-10 md:p-16 relative overflow-hidden group">
+            <FadeIn delay={200} className="lg:w-1/2 bg-primary rounded-3xl p-10 md:p-16 relative overflow-hidden group">
               {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#B8872A]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl group-hover:bg-[#B8872A]/20 transition-all duration-700" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl group-hover:bg-secondary/20 transition-all duration-700" />
               <div className="relative z-10">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Technical Sourcing Advantage</h3>
                 <ul className="space-y-6">
@@ -176,14 +176,14 @@ export default function Home() {
                     "Technical Parity Review for Legacy Parts",
                   ].map((list, i) => (
                     <li key={i} className="flex items-center gap-4 text-white/80 font-medium text-sm">
-                      <svg className="w-5 h-5 text-[#B8872A] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-5 h-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                       {list}
                     </li>
                   ))}
                 </ul>
-                <Link href="/services" className="mt-10 btn-gold w-full text-center">View Technical Scopes</Link>
+                <Link href="/services" className="mt-10 btn-primary w-full text-center">View Technical Scopes</Link>
               </div>
             </FadeIn>
           </div>
@@ -195,7 +195,7 @@ export default function Home() {
         <div className="section-container">
           <FadeIn className="text-center mb-16 md:mb-20 max-w-2xl mx-auto">
             <span className="eyebrow">The Procurement Cycle</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0E1C36]">How We Work</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-primary">How We Work</h2>
             <p className="mt-6 text-[#374151] font-medium opacity-70 text-lg">A systematic approach to aviation sourcing, designed to ensure technical compliance and logistical efficiency for our global partners.</p>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -205,9 +205,9 @@ export default function Home() {
               { step: "03", title: "Commercial Quote", desc: "We provide detailed commercial offers including firm leads, condition verification, and airworthiness info." },
               { step: "04", title: "Logistical Dispatch", desc: "Following approval, units are dispatched via priority air freight or NFO courier services for rapid delivery." },
             ].map((item, idx) => (
-              <FadeIn key={idx} delay={idx * 100} className="relative p-10 border border-[#0E1C36]/5 rounded-2xl bg-white shadow-sm hover:border-[#B8872A]/30 transition-all group">
-                <span className="text-5xl font-extrabold text-[#0E1C36]/5 absolute top-6 right-6 italic group-hover:text-[#B8872A]/10 transition-colors select-none">{item.step}</span>
-                <h4 className="text-sm font-bold uppercase tracking-widest text-[#B8872A] mb-4">{item.title}</h4>
+              <FadeIn key={idx} delay={idx * 100} className="relative p-10 border border-primary/5 rounded-2xl bg-white shadow-sm hover:border-accent/30 transition-all group">
+                <span className="text-5xl font-extrabold text-primary/5 absolute top-6 right-6 italic group-hover:text-accent/10 transition-colors select-none">{item.step}</span>
+                <h4 className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">{item.title}</h4>
                 <p className="text-sm text-[#374151] font-medium leading-relaxed opacity-90">{item.desc}</p>
               </FadeIn>
             ))}
@@ -221,10 +221,10 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-16 lg:items-center">
             <FadeIn className="lg:w-1/3 text-center lg:text-left">
               <span className="eyebrow">Rigorous Documentation</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0E1C36]">Traceability & Reliability</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Traceability & Reliability</h2>
               <p className="text-[#374151] font-medium leading-relaxed text-lg">Every aviation component sourced by Purvi Aero undergoes a documentation audit to ensure it meets the highest standards of technical trace and airworthiness.</p>
-              <div className="mt-10 p-6 bg-[#F9FAFB] rounded-2xl border-l-4 border-[#B8872A] text-left">
-                <p className="text-sm font-bold text-[#0E1C36] uppercase tracking-widest mb-2">Technical Desk</p>
+              <div className="mt-10 p-6 bg-[#F9FAFB] rounded-2xl border-l-4 border-secondary text-left">
+                <p className="text-sm font-bold text-primary uppercase tracking-widest mb-2">Technical Desk</p>
                 <p className="text-xs text-[#374151] opacity-70 leading-relaxed font-medium italic">Our team monitors cure-dates, shelf-life, and technical parity for all consumable and chemical line items.</p>
               </div>
             </FadeIn>
@@ -237,9 +237,9 @@ export default function Home() {
                 { title: "Global Paperwork", desc: "Accurate export documentation and commercial paperwork for seamless global logistics hubs." },
                 { title: "Safety Data Sheets", desc: "Comprehensive technical data and SDS provided for all chemical materials sourced." },
               ].map((item, idx) => (
-                <FadeIn key={idx} delay={idx * 50} className="flex gap-4 border-l border-[#0E1C36]/10 pl-6 group hover:border-[#B8872A] transition-colors duration-500">
+                <FadeIn key={idx} delay={idx * 50} className="flex gap-4 border-l border-primary/10 pl-6 group hover:border-secondary transition-colors duration-500">
                   <div>
-                    <h4 className="font-bold text-sm uppercase tracking-widest text-[#0E1C36] mb-2">{item.title}</h4>
+                    <h4 className="font-bold text-sm uppercase tracking-widest text-primary mb-2">{item.title}</h4>
                     <p className="text-xs text-[#374151] font-medium opacity-70 leading-relaxed">{item.desc}</p>
                   </div>
                 </FadeIn>
@@ -250,16 +250,16 @@ export default function Home() {
       </section>
 
       {/* ── FINAL CTA BANNER ── */}
-      <section className="bg-[#0E1C36] py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#B8872A 1.5px, transparent 1.5px)", backgroundSize: "40px 40px" }} />
+      <section className="bg-primary py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#0071CE 1.5px, transparent 1.5px)", backgroundSize: "40px 40px" }} />
         <div className="section-container relative z-10 text-center">
           <FadeIn className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-6xl font-extrabold text-white mb-8 tracking-tighter">Your Technical <span className="text-[#B8872A]">RFQ Desk</span></h2>
+            <h2 className="text-3xl md:text-6xl font-extrabold text-white mb-8 tracking-tighter">Your Technical <span className="text-secondary">RFQ Desk</span></h2>
             <p className="text-white/60 text-xl font-medium mb-12 max-w-2xl mx-auto leading-relaxed italic">
               "One Source. Every Part. Purvi Aero International FZC is dedicated to supporting the global aviation supply chain with operational speed and technical rigor."
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/contact" className="btn-gold px-12 py-5 text-lg">Submit Spares Requirement</Link>
+              <Link href="/contact" className="btn-primary px-12 py-5 text-lg">Submit Spares Requirement</Link>
               <div className="flex flex-col items-center sm:items-start text-white/40">
                 <span className="text-[10px] font-bold uppercase tracking-widest mb-1">Direct Technical Line</span>
                 <span className="text-sm font-bold text-white/80">rfq@purviaero.com</span>
@@ -278,7 +278,7 @@ export default function Home() {
                 <div className="mb-6 transition-transform duration-500 group-hover:scale-110">
                   {icon}
                 </div>
-                <h4 className="text-[#0E1C36] font-bold text-xs sm:text-sm tracking-[0.2em] uppercase whitespace-pre-line leading-relaxed">
+                <h4 className="text-primary font-bold text-xs sm:text-sm tracking-[0.2em] uppercase whitespace-pre-line leading-relaxed">
                   {label}
                 </h4>
               </FadeIn>

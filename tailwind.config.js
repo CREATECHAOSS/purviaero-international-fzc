@@ -10,10 +10,11 @@ module.exports = {
         rajdhani: ["var(--font-rajdhani)", "sans-serif"],
       },
       colors: {
-        primary: "#0E1C36", // Navy
-        accent: "#B8872A", // Gold
-        background: "#FFFFFF", // White
-        "text-secondary": "#666258",
+        primary: "#000543", // Deep Navy from Logo
+        secondary: "#0071CE", // Main Blue from Logo
+        accent: "#00999F", // Teal from Logo
+        background: "#FFFFFF",
+        "text-secondary": "#4B5563",
       },
     },
   },

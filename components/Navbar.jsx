@@ -20,7 +20,7 @@ const Navbar = () => {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <nav className="bg-[#0E1C36] text-white sticky top-0 z-50 shadow-lg">
+    <nav className="bg-primary text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex justify-between h-20 items-center">
 
@@ -29,13 +29,11 @@ const Navbar = () => {
             href="/"
             className="flex items-center gap-4 group"
           >
-            {/* Geometric Lockup Icon */}
-            <div className="flex gap-1.5 h-7">
-              <div className="w-1 h-full bg-[#B8872A] rounded-full" />
-              <div className="w-1 h-[80%] my-auto bg-[#B8872A]/70 rounded-full" />
-              <div className="w-1 h-[60%] my-auto bg-[#B8872A]/40 rounded-full" />
-            </div>
-            
+            <img 
+              src="/new/iCON.svg" 
+              alt="Purvi International Icon" 
+              className="h-10 w-auto transition-transform duration-500 group-hover:rotate-[15deg]"
+            />
             <div className="flex flex-col">
               <span 
                 className="text-lg font-extrabold tracking-[0.05em] text-white leading-none"
@@ -44,7 +42,7 @@ const Navbar = () => {
                 PURVI AERO
               </span>
               <span 
-                className="text-[9px] font-bold tracking-[0.35em] text-white/40 leading-none mt-1.5 uppercase"
+                className="text-[9px] font-bold tracking-[0.35em] text-accent leading-none mt-1.5 uppercase"
                 style={{ fontFamily: "var(--font-outfit), sans-serif" }}
               >
                 INTERNATIONAL FZC
@@ -60,20 +58,20 @@ const Navbar = () => {
                 href={href}
                 className={`text-sm font-medium transition-colors duration-300 relative py-1 ${
                   isActive(href)
-                    ? "text-[#B8872A]"
-                    : "text-white/80 hover:text-[#B8872A]"
+                    ? "text-secondary"
+                    : "text-white/80 hover:text-secondary"
                 }`}
               >
                 {label}
                 {/* Active underline */}
                 {isActive(href) && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B8872A] rounded-full" />
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary rounded-full" />
                 )}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="ml-2 bg-[#B8872A] text-white text-[13px] font-bold uppercase tracking-widest px-8 py-3.5 rounded-xl hover:bg-[#A17624] transition-all duration-300 hover:scale-[1.02] shadow-xl hover:shadow-[#B8872A]/30 border border-[#B8872A]/20"
+              className="ml-2 btn-primary !px-6 !py-3 !text-[12px] shadow-secondary/10"
             >
               Submit RFQ
             </Link>
@@ -83,7 +81,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle navigation menu"
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-[#B8872A] hover:text-[#A17624] transition-colors"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-secondary hover:text-secondary/80 transition-colors"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isOpen ? (
@@ -98,7 +96,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#0E1C36] border-t border-white/10">
+        <div className="md:hidden bg-primary border-t border-white/10">
           <div className="px-6 py-4 space-y-1">
             {NAV_LINKS.map(({ href, label }) => (
               <Link
@@ -107,8 +105,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-300 ${
                   isActive(href)
-                    ? "text-[#B8872A] bg-white/5"
-                    : "text-white/80 hover:text-[#B8872A] hover:bg-white/5"
+                    ? "text-secondary bg-white/5"
+                    : "text-white/80 hover:text-secondary hover:bg-white/5"
                 }`}
               >
                 {label}
@@ -117,7 +115,7 @@ const Navbar = () => {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block mt-3 px-4 py-4 rounded-xl text-sm font-bold uppercase tracking-widest bg-[#B8872A] text-white text-center hover:bg-[#A17624] transition-colors"
+              className="block mt-3 px-4 py-4 rounded-xl text-sm font-bold uppercase tracking-widest bg-secondary text-white text-center hover:bg-secondary/90 transition-colors"
             >
               Submit RFQ
             </Link>

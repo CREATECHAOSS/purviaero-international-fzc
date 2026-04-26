@@ -18,7 +18,7 @@
 
   /* Improved contrast for text hierarchy */
   h1, h2, h3, h4, h5, h6 {
-    @apply text-[#0E1C36] tracking-tight;
+    @apply text-primary tracking-tight;
     font-family: var(--font-outfit), sans-serif;
   }
 }
@@ -26,32 +26,30 @@
 /* ─── Component utilities ─── */
 @layer components {
 
-  /* Enterprise Gold pill button */
-  .btn-gold {
+  /* Primary Blue Button */
+  .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl
            font-bold text-sm tracking-[0.05em] uppercase text-white
            transition-all duration-300 shadow-xl
-           hover:shadow-[#B8872A]/20 hover:-translate-y-0.5 active:scale-[0.98];
-    background-color: #B8872A;
+           hover:shadow-secondary/20 hover:-translate-y-0.5 active:scale-[0.98];
+    background-color: #0071CE;
   }
-  .btn-gold:hover {
-    background-color: #A17624;
+  .btn-primary:hover {
+    background-color: #005FA3;
   }
 
-  /* Enterprise Navy outline pill button */
-  .btn-navy-outline {
+  /* Secondary Navy outline button */
+  .btn-outline {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl
            font-bold text-sm tracking-[0.05em] uppercase border-2
            transition-all duration-300
            hover:-translate-y-0.5 active:scale-[0.98] shadow-sm;
-    border-color: #0E1C36;
-    color: #0E1C36;
+    border-color: #000543;
+    color: #000543;
     background-color: transparent;
   }
-  .btn-navy-outline:hover {
-    background-color: #0E1C36;
-    color: #FFFFFF;
-    @apply shadow-xl shadow-[#0E1C36]/10;
+  .btn-outline:hover {
+    @apply bg-primary text-white shadow-xl shadow-primary/10;
   }
 
   /* Global Section Container */
@@ -64,10 +62,10 @@
     @apply py-16 md:py-24 lg:py-32;
   }
 
-  /* Eyebrow Label */
+  /* Eyebrow Label using Teal Accent */
   .eyebrow {
     @apply inline-flex items-center gap-2 text-[10px] font-bold
-           tracking-[0.25em] uppercase text-[#B8872A] mb-6;
+           tracking-[0.25em] uppercase text-accent mb-6;
   }
 }
 
