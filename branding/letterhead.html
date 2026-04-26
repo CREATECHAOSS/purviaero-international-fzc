@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purvi Aero - Letterhead</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#000543',
+            secondary: '#0071CE',
+            accent: '#00999F',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Print Setup for A4 Document */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    body {
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      background-color: white;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+      position: relative;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      display: flex;
+      flex-direction: column;
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        padding: 0;
+      }
+      .a4-page {
+        box-shadow: none;
+        page-break-after: always;
+      }
+    }
+    .content-editable:empty:before {
+      content: attr(data-placeholder);
+      color: #9CA3AF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="a4-page">
+    <!-- Header -->
+    <header class="pt-12 px-16 pb-8 border-b-4 border-secondary flex justify-between items-start relative overflow-hidden">
+      <!-- Decorative Accent -->
+      <div class="absolute top-0 right-0 w-64 h-64 bg-accent opacity-5 rounded-bl-full blur-3xl -z-10"></div>
+      
+      <!-- Logo Lockup -->
+      <div class="flex items-center gap-4">
+        <img src="../public/new/iCON.svg" alt="Purvi Aero Icon" class="h-14 w-auto" />
+        <div class="flex flex-col justify-center">
+          <span class="font-display text-3xl font-extrabold tracking-widest text-primary leading-none">
+            PURVI AERO
+          </span>
+          <span class="font-display text-[10px] font-bold tracking-[0.4em] text-secondary leading-none mt-1.5 uppercase">
+            International FZC
+          </span>
+        </div>
+      </div>
+
+      <!-- Header Contact -->
+      <div class="text-right font-sans text-[10px] text-gray-500 space-y-1 mt-2">
+        <p><strong class="text-primary font-bold">DATE:</strong> <span contenteditable="true" class="content-editable outline-none" data-placeholder="DD / MM / YYYY"></span></p>
+        <p><strong class="text-primary font-bold">REF:</strong> <span contenteditable="true" class="content-editable outline-none" data-placeholder="PAI-2026-XXXX"></span></p>
+      </div>
+    </header>
+
+    <!-- Body Content (Editable) -->
+    <main class="flex-1 px-16 py-12 font-sans text-[11pt] text-gray-800 leading-relaxed outline-none" contenteditable="true">
+      <p class="font-bold text-gray-900 mb-6">Subject: <span class="content-editable outline-none font-normal" data-placeholder="Enter Document Subject Here..."></span></p>
+      
+      <p class="mb-4">To Whom It May Concern,</p>
+      
+      <p class="mb-4 text-gray-400 italic">
+        [ Click here to start typing the contents of your letter, appointment, or official correspondence. This area is completely editable. When finished, simply use the browser's Print dialog to save this document as a PDF. ]
+      </p>
+
+      <p class="mb-4">
+        We are pleased to confirm that Purvi Aero International FZC remains committed to providing the highest quality aviation spares and rotable management services to our global partners.
+      </p>
+
+      <div class="mt-16">
+        <p class="mb-1">Sincerely,</p>
+        <div class="h-16 mb-2 border-b border-gray-200 w-48 relative">
+          <span class="absolute bottom-2 left-0 text-gray-300 italic text-sm">Signature here</span>
+        </div>
+        <p class="font-bold text-primary mb-0.5"><span class="content-editable outline-none" data-placeholder="Your Name"></span></p>
+        <p class="text-xs text-secondary font-semibold uppercase tracking-wider"><span class="content-editable outline-none" data-placeholder="Your Title / Department"></span></p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white px-16 py-8 relative overflow-hidden">
+      <!-- Decorative Accent -->
+      <div class="absolute bottom-0 left-0 w-32 h-32 bg-secondary opacity-20 rounded-tr-full blur-2xl"></div>
+      
+      <div class="relative z-10 flex justify-between items-end">
+        <!-- Company Info -->
+        <div class="font-sans text-[9px] text-white/70 space-y-1.5 w-1/2">
+          <p class="text-white font-bold tracking-widest uppercase text-[10px] mb-2">Purvi Aero International FZC</p>
+          <p>Registration No: XXXXXXXX | License No: XXXXXXXX</p>
+          <p>PO Box XXXX, Business Center, Dubai, United Arab Emirates</p>
+          <p class="italic mt-2 text-accent tracking-wider font-semibold uppercase text-[8px]">Keeping the World Airborne</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="font-sans text-[9px] text-right text-white/70 space-y-1.5">
+          <p><span class="text-secondary font-bold mr-2 uppercase tracking-widest text-[8px]">Phone</span> +971 00 000 0000</p>
+          <p><span class="text-secondary font-bold mr-2 uppercase tracking-widest text-[8px]">Email</span> info@purviaero.com</p>
+          <p><span class="text-secondary font-bold mr-2 uppercase tracking-widest text-[8px]">Web</span> www.purviaero.com</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
