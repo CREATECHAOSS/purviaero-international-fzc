@@ -18,33 +18,16 @@ const Footer = () => {
           
           {/* Column 1: Brand Identity */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-4 mb-8 group">
+            <Link href="/" className="inline-flex items-center mb-10 group">
               <img 
-                src="/new/iCON.svg" 
-                alt="Purvi International Icon" 
-                className="h-10 w-auto opacity-90 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
+                src="/logo-with-slogan-light.svg" 
+                alt="Purvi Aero International" 
+                className="h-16 w-auto opacity-95 transition-all duration-500 group-hover:scale-[1.02] group-hover:opacity-100"
               />
-              <div className="flex flex-col">
-                <span 
-                  className="text-xl font-extrabold tracking-[0.05em] text-white leading-none"
-                  style={{ fontFamily: "var(--font-outfit), sans-serif" }}
-                >
-                  PURVI AERO
-                </span>
-                <span 
-                  className="text-[10px] font-bold tracking-[0.4em] text-accent leading-none mt-2 uppercase"
-                  style={{ fontFamily: "var(--font-outfit), sans-serif" }}
-                >
-                  INTERNATIONAL FZC
-                </span>
-              </div>
             </Link>
-            <p className="text-white/50 text-sm leading-relaxed font-medium mb-8">
+            <p className="text-white/50 text-sm leading-relaxed font-medium">
               A global leader in specialized aviation procurement, providing technical sourcing for critical spares, rotable assets, and MRO consumables.
             </p>
-            <div className="text-secondary font-bold text-sm italic tracking-widest uppercase">
-              One Source. Every Part.
-            </div>
           </div>
 
           {/* Column 2: Quick Navigation */}

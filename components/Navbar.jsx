@@ -27,27 +27,13 @@ const Navbar = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-4 group"
+            className="flex items-center group"
           >
             <img 
-              src="/new/iCON.svg" 
-              alt="Purvi International Icon" 
-              className="h-10 w-auto transition-transform duration-500 group-hover:rotate-[15deg]"
+              src="/logo-with-slogan-light.svg" 
+              alt="Purvi Aero International" 
+              className="h-14 w-auto transform transition-transform duration-500 group-hover:scale-[1.02]"
             />
-            <div className="flex flex-col">
-              <span 
-                className="text-lg font-extrabold tracking-[0.05em] text-white leading-none"
-                style={{ fontFamily: "var(--font-outfit), sans-serif" }}
-              >
-                PURVI AERO
-              </span>
-              <span 
-                className="text-[9px] font-bold tracking-[0.35em] text-accent leading-none mt-1.5 uppercase"
-                style={{ fontFamily: "var(--font-outfit), sans-serif" }}
-              >
-                INTERNATIONAL FZC
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Nav */}
