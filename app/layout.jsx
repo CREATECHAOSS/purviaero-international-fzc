@@ -30,8 +30,8 @@ export const metadata = {
     canonical: './',
   },
   icons: {
-    icon: '/logo-lockup-white.svg',
-    apple: '/logo-lockup-white.svg',
+    icon: '/icon-light.svg',
+    apple: '/icon-light.svg',
   },
 };
 
