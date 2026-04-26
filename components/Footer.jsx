@@ -18,12 +18,33 @@ const Footer = () => {
           
           {/* Column 1: Brand Identity */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center mb-10 group">
-              <img 
-                src="/logo-with-slogan-light.svg" 
-                alt="Purvi Aero International" 
-                className="h-16 w-auto opacity-95 transition-all duration-500 group-hover:scale-[1.02] group-hover:opacity-100"
-              />
+            <Link href="/" className="inline-flex items-center gap-5 mb-10 group">
+              <div className="relative flex items-center justify-center bg-white/5 p-3.5 rounded-2xl border border-white/10 transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20">
+                <img 
+                  src="/icon-light.svg" 
+                  alt="Purvi Aero Icon" 
+                  className="h-12 w-auto transform transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span 
+                  className="text-3xl font-extrabold tracking-[0.05em] text-white leading-none"
+                  style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+                >
+                  PURVI AERO
+                </span>
+                <span 
+                  className="text-[11px] font-bold tracking-[0.35em] text-secondary leading-none mt-2.5 uppercase"
+                  style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+                >
+                  INTERNATIONAL FZC
+                </span>
+                <span 
+                  className="text-[9px] font-medium tracking-[0.2em] text-white/50 leading-none mt-2 uppercase italic"
+                >
+                  Keeping the World Airborne
+                </span>
+              </div>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed font-medium">
               A global leader in specialized aviation procurement, providing technical sourcing for critical spares, rotable assets, and MRO consumables.

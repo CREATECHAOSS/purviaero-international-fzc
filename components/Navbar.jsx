@@ -27,13 +27,34 @@ const Navbar = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center group"
+            className="flex items-center gap-4 group"
           >
-            <img 
-              src="/logo-with-slogan-light.svg" 
-              alt="Purvi Aero International" 
-              className="h-14 w-auto transform transition-transform duration-500 group-hover:scale-[1.02]"
-            />
+            <div className="relative flex items-center justify-center bg-white/5 p-2.5 rounded-xl border border-white/10 transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20">
+              <img 
+                src="/icon-light.svg" 
+                alt="Purvi Aero Icon" 
+                className="h-10 w-auto transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <span 
+                className="text-2xl font-extrabold tracking-[0.05em] text-white leading-none"
+                style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+              >
+                PURVI AERO
+              </span>
+              <span 
+                className="text-[10px] font-bold tracking-[0.35em] text-secondary leading-none mt-1.5 uppercase"
+                style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+              >
+                INTERNATIONAL FZC
+              </span>
+              <span 
+                className="text-[8px] font-medium tracking-[0.2em] text-white/50 leading-none mt-1.5 uppercase italic"
+              >
+                Keeping the World Airborne
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
