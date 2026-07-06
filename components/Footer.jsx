@@ -102,6 +102,16 @@ const Footer = () => {
                   info@purviaero.com
                 </a>
               </div>
+              <div className="pt-4 border-t border-white/5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-2">Registered Address</p>
+                <p className="text-white/60 text-xs leading-relaxed font-medium">
+                  Warehouse No. (A-02)<br />
+                  Block - A<br />
+                  Umm Al Quwain Free Trade Zone,<br />
+                  Ahmed Bin Rashid Port,<br />
+                  Umm Al Quwain, UAE
+                </p>
+              </div>
             </div>
           </div>
         </div>

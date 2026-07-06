@@ -93,6 +93,26 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Registered Office */}
+              <div className="flex items-start gap-4 p-6 border border-primary/10 rounded-2xl">
+                <div className="w-12 h-12 bg-primary/5 flex items-center justify-center rounded-xl shrink-0">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#374151] opacity-50 mb-1">Registered Office</p>
+                  <p className="text-primary font-semibold text-sm leading-relaxed">
+                    Warehouse No. (A-02)<br />
+                    Block - A<br />
+                    Umm Al Quwain Free Trade Zone,<br />
+                    Ahmed Bin Rashid Port,<br />
+                    Umm Al Quwain, United Arab Emirates
+                  </p>
+                </div>
+              </div>
+
               {/* AOG Alert */}
               <div className="p-6 bg-secondary/5 border border-secondary/20 rounded-2xl">
                 <div className="flex items-center gap-3 mb-3">
