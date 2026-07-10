@@ -5,11 +5,12 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
-  { href: "/",         label: "Home"     },
-  { href: "/services", label: "Services" },
-  { href: "/aog",      label: "AOG Support" },
-  { href: "/about",    label: "About Us" },
-  { href: "/contact",  label: "Contact"  },
+  { href: "/",            label: "Home"             },
+  { href: "/consumables", label: "Consumables"      },
+  { href: "/spares",      label: "Spares & Rotables" },
+  { href: "/aog",         label: "AOG Support"      },
+  { href: "/about",       label: "About"            },
+  { href: "/contact",     label: "Contact"          },
 ];
 
 const Navbar = () => {
@@ -80,7 +81,7 @@ const Navbar = () => {
               href="/contact"
               className="ml-2 btn-primary !px-6 !py-3 !text-[12px] shadow-secondary/10"
             >
-              Submit RFQ
+              Request Quote
             </Link>
           </div>
 
@@ -124,7 +125,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="block mt-3 px-4 py-4 rounded-xl text-sm font-bold uppercase tracking-widest bg-secondary text-white text-center hover:bg-secondary/90 transition-colors"
             >
-              Submit RFQ
+              Request Quote
             </Link>
           </div>
         </div>

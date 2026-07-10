@@ -59,7 +59,7 @@ export default function AOGPage() {
               <span className="text-secondary">We Move Now.</span>
             </h1>
             <p className="mt-10 text-white/70 text-xl md:text-2xl leading-relaxed max-w-2xl font-medium border-l-4 border-secondary pl-8">
-              Every grounded minute impacts your bottom line. Purvi Aero providing prioritized technical sourcing and logistical support for line-critical requirements.
+              Every grounded minute impacts your bottom line. Purvi Aero provides prioritised technical sourcing and logistical support for line-critical spares, urgent sealants, and expired chemical replenishment.
             </p>
             <Link
               href="/contact"

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "aeroshell",
+    "name": "AeroShell (Shell Aviation)",
+    "category": "Lubricants/Greases"
+  },
+  {
+    "id": "exxonmobil",
+    "name": "Mobil Jet Oil / ExxonMobil",
+    "category": "Lubricants/Greases"
+  },
+  {
+    "id": "castrol",
+    "name": "Castrol Aviation",
+    "category": "Lubricants/Greases"
+  },
+  {
+    "id": "pidilite",
+    "name": "Pidilite Industries",
+    "category": "Adhesives/Sealants"
+  },
+  {
+    "id": "loctite",
+    "name": "Loctite (Henkel)",
+    "category": "Adhesives/Sealants"
+  },
+  {
+    "id": "three_m",
+    "name": "3M Aerospace",
+    "category": "Adhesives/Sealants"
+  },
+  {
+    "id": "zipchem",
+    "name": "Zip-Chem",
+    "category": "Cleaning/Solvents"
+  },
+  {
+    "id": "brulin",
+    "name": "Brulin",
+    "category": "Cleaning/Solvents"
+  },
+  {
+    "id": "chemtronics",
+    "name": "Chemtronics",
+    "category": "Cleaning/Solvents"
+  },
+  {
+    "id": "ppg",
+    "name": "PPG Aerospace",
+    "category": "Paints/Coatings"
+  },
+  {
+    "id": "akzonobel",
+    "name": "Akzo Nobel Aerospace Coatings",
+    "category": "Paints/Coatings"
+  },
+  {
+    "id": "sherwin_williams",
+    "name": "Sherwin-Williams Aerospace",
+    "category": "Paints/Coatings"
+  }
+]

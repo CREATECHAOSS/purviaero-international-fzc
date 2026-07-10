@@ -47,7 +47,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed font-medium">
-              A global leader in specialized aviation procurement, providing technical sourcing for critical spares, rotable assets, and MRO consumables.
+              A UAE-based aviation trading specialist focused on MRO chemical consumables, lubricants, sealants, and aerospace coatings, with secondary spares and rotables capability.
             </p>
           </div>
 
@@ -56,11 +56,11 @@ const Footer = () => {
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-8">Capabilities</h4>
             <nav className="flex flex-col gap-4 text-sm font-medium">
               {[
-                { label: "Critical Spares", href: "/services#aircraft-spares" },
-                { label: "Technical Consumables", href: "/services#mro-consumables" },
-                { label: "Expendable Hardware", href: "/services#expendables-hardware" },
-                { label: "Rotables Management", href: "/services#rotables-management" },
-                { label: "AOG Priority Support", href: "/aog" },
+                { label: "MRO Consumables", href: "/consumables" },
+                { label: "Aviation Lubricants", href: "/consumables#lubricants" },
+                { label: "Sealants & Adhesives", href: "/consumables#adhesives" },
+                { label: "Spares & Rotables", href: "/spares" },
+                { label: "AOG Support", href: "/aog" },
               ].map((link) => (
                 <Link key={link.label} href={link.href} className="text-white/60 hover:text-secondary transition-colors duration-300">
                   {link.label}

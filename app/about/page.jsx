@@ -2,30 +2,37 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata = {
-  title: 'About Purvi Aero International FZC | Aviation Spares Profile',
-  description: 'Founded by aviation professionals. Purvi Aero International FZC is a global trading company providing aircraft components and MRO consumables to the aviation industry. One Source. Every Part.',
+  title: 'About Purvi Aero International FZC | MRO Consumables Partner',
+  description: 'Specialised aviation trading company based in the UAE. Sourcing partner for aircraft chemicals, sealants, lubricants, coatings, and line components. Purvi Aero International FZC.',
 };
 
 export default function AboutPage() {
   return (
     <main>
-      {/* ── SECTION 1: HERO ── */}
-      <section className="bg-primary py-20 text-white relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none opacity-[0.05]" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M0 0h20v20H0V0zm10 17L3 10l7-7 7 7-7 7z\" fill=\"%230071CE\" fill-opacity=\"1\"/%3E%3C/svg%3E')" }} />
+      {/* ── HERO ── */}
+      <section className="bg-primary py-28 text-white relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none opacity-[0.45]">
+          <img 
+            src="/images/premium_photo-1661963090269-dcb0d1929cda.avif" 
+            alt="Aircraft on tarmac silhouette" 
+            className="w-full h-full object-cover filter brightness-[0.75] contrast-100"
+          />
+        </div>
+        <div className="absolute inset-0 bg-[#000543]/40 pointer-events-none" />
         <div className="section-container relative z-10 text-center">
           <FadeIn>
-            <span className="eyebrow !text-secondary mb-8 justify-center">Corporate Profile</span>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tighter leading-none">
+            <span className="eyebrow mb-8 justify-center" style={{ color: '#00999F' }}>Corporate Profile</span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tighter leading-none" style={{ color: '#ffffff' }}>
               Purvi Aero <br className="hidden md:block"/> International FZC
             </h1>
-            <p className="text-lg sm:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-medium">
-              Founded by aviation professionals with decades of combined experience, we act as a high-tempo technical sourcing partner for global airlines and MRO operators.
+            <p className="text-lg sm:text-2xl max-w-4xl mx-auto leading-relaxed font-medium" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
+              A UAE-based aviation trading company built to manage the logistical and technical compliance demands of aerospace chemical consumables.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* ── SECTION 2: VALUES & OPERATIONS ── */}
+      {/* ── VALUES & OPERATIONS ── */}
       <section className="bg-white py-20 border-b border-black/5">
         <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
@@ -40,7 +47,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-extrabold text-primary">Our Mission</h2>
               </div>
               <p className="text-[#374151] text-lg leading-relaxed mb-8 font-medium">
-                Our mission is to provide the global aviation industry with a reliable, operationally rigorous, and professional sourcing partner. We prioritize responsive service alongside exacting technical requirements for spares and rotables.
+                To streamline the procurement and transport of shelf-life sensitive aviation chemicals and greases for commercial, regional, and MRO operators worldwide, combining strict spec vetting with efficient UAE-hub logistics.
               </p>
               <div className="h-1 w-20 bg-accent rounded-full group-hover:w-full transition-all duration-700 opacity-30" />
             </FadeIn>
@@ -56,7 +63,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-extrabold text-primary">Our Approach</h2>
               </div>
               <p className="text-[#374151] text-lg leading-relaxed mb-8 font-medium">
-                We operate as a technical procurement partner — not a catalogue distributor. Every enquiry is handled by aviation professionals who understand technical requirements, airworthiness standards, and the critical urgency of operations.
+                We operate as a technical procurement desk. Every chemical list is vetted against OEM maintenance manual specifications before dispatch to prevent parts mismatch and ensure regulatory compliance.
               </p>
               <div className="h-1 w-20 bg-accent rounded-full group-hover:w-full transition-all duration-700 opacity-30" />
             </FadeIn>
@@ -64,33 +71,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── SECTION 3: OPERATIONAL SCOPE (Expansion) ── */}
+      {/* ── OPERATIONAL SCOPE ── */}
       <section className="bg-white py-20">
         <div className="section-container">
           <div className="bg-primary rounded-[3rem] p-10 md:p-20 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 blur-[100px] rounded-full" />
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-16">
               <div className="lg:col-span-1">
-                <span className="eyebrow !text-accent block mb-6">Operational Focus</span>
-                <h3 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">Rigorous Quality <br/> Management</h3>
+                <span className="eyebrow !text-accent block mb-6">Compliance Desk</span>
+                <h3 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">Technical Quality Management</h3>
                 <p className="text-white/60 font-medium text-lg leading-relaxed mb-10">
-                  Purvi Aero processes every procurement line through a multi-stage technical audit before dispatch.
+                  Monitoring cure-dates, shelf-life limits, and spec alignments is central to our quality process.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 text-white/90 font-bold uppercase tracking-widest text-xs">
-                    <span className="w-2 h-2 rounded-full bg-accent" /> FAA Regular Audit Compliance
+                    <span className="w-2 h-2 rounded-full bg-accent" /> Full Batch Traceability Vetted
                   </div>
                   <div className="flex items-center gap-4 text-white/90 font-bold uppercase tracking-widest text-xs">
-                    <span className="w-2 h-2 rounded-full bg-accent" /> EASA Documentation Parity
+                    <span className="w-2 h-2 rounded-full bg-accent" /> SDS & Hazmat Compliance Assured
                   </div>
                 </div>
               </div>
               <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
                 {[
-                  { title: "Global Supplier Network", desc: "Accessing a worldwide vetted network of OEMs, authorized distributors, and bonded repair facilities." },
-                  { title: "Technical Verification", desc: "Pre-offer technical review of part numbers, alternate revisions, and airworthiness status." },
-                  { title: "Logistical Speed", desc: "Strategically located to support rapid transit times for international aviation hubs." },
-                  { title: "Trace Consistency", desc: "Ensuring all shipments are delivered with the required certification (8130-3, Form 1, CoC)." },
+                  { title: "Direct OEM Sourcing", desc: "Accessing approved turbine oil, sealant, and paint product lines from verified producers." },
+                  { title: "Shelf-Life Audits", desc: "Strict verification of remaining shelf-life and manufacturing cure-dates on all chemical lots." },
+                  { title: "UAE Logistical Hub", desc: "Fast transit times and cross-border customs handling via Umm Al Quwain Free Zone." },
+                  { title: "Spares Support Desk", desc: "Rotable components and expendable hardware sourced as a secondary desk capability." },
                 ].map((item, idx) => (
                   <div key={idx} className="p-8 border border-white/10 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors duration-500 group">
                     <h4 className="text-secondary font-extrabold text-xl mb-4 group-hover:text-white transition-colors">{item.title}</h4>
@@ -103,16 +110,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── SECTION 4: CONTACT CTA ── */}
+      {/* ── CONTACT CTA ── */}
       <section className="bg-[#F9FAFB] py-20 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <FadeIn className="bg-white p-12 md:p-20 rounded-[3rem] shadow-sm border border-primary/5 relative">
-            <h3 className="text-3xl font-bold text-primary mb-8">Technical Trading & Supply</h3>
+            <h3 className="text-3xl font-bold text-primary mb-8">Intake Desk</h3>
             <p className="text-lg text-[#374151] mb-12 font-medium opacity-80 leading-relaxed">
-              We are currently expanding our digital intake systems for global operators. For immediate technical enquiries or to submit your spare requirement lists, please use our prioritized RFQ portal.
+              Submit your parts lists or chemical specs for pricing and lead time checks.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/contact" className="btn-primary px-12 py-5 text-lg shadow-secondary/20">Access RFQ Portal</Link>
+              <Link href="/contact" className="btn-primary px-12 py-5 text-lg shadow-secondary/20">Request Quote</Link>
               <div className="flex flex-col items-center sm:items-start text-left px-8 py-4 bg-primary/5 rounded-2xl">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-accent mb-1">General Inbox</span>
                 <span className="text-sm font-bold text-primary">info@purviaero.com</span>
