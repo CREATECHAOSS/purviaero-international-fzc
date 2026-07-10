@@ -28,15 +28,13 @@ const Navbar = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-4 group"
+            className="flex items-center gap-3 group"
           >
-            <div className="relative flex items-center justify-center bg-white/5 p-2.5 rounded-xl border border-white/10 transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20">
-              <img 
-                src="/icon-light.svg" 
-                alt="Purvi Aero Icon" 
-                className="h-10 w-auto transform transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
+            <img 
+              src="/icon-light.svg" 
+              alt="Purvi Aero Icon" 
+              className="h-14 w-auto transform transition-transform duration-500 group-hover:scale-105"
+            />
             <div className="flex flex-col justify-center">
               <span 
                 className="text-2xl font-extrabold tracking-[0.05em] text-white leading-none"

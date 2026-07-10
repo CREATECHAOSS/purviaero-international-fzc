@@ -86,7 +86,7 @@ export default function Home() {
             <FadeIn className="flex-1">
               <span className="eyebrow text-accent font-mono tracking-widest">MRO Chemical Logistics</span>
               <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-[1.05] font-extrabold mb-8 text-primary">
-                Sourcing & Delivering <br />
+                Delivering <br />
                 <span className="text-secondary">Aviation Consumables</span>
               </h1>
               <p className="text-base leading-relaxed mb-10 max-w-lg text-[#374151] font-medium border-l-4 border-accent pl-6 py-2">
