@@ -2,187 +2,352 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Purvi Aero - Email Signature Templates</title>
+  <title>Purvi Aero - Interactive Email Signature Generator</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
     body {
-      background-color: #f3f4f6;
+      background-color: #F1F5F9;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       padding: 40px 20px;
+      color: #0F172A;
     }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .header-box {
+      background: #000543;
+      color: white;
+      padding: 30px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px -5px rgba(0, 5, 67, 0.2);
+    }
+
+    .header-box h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .header-box p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .notice-banner {
+      background: #FEF3C7;
+      border-left: 4px solid #F59E0B;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      color: #92400E;
+      line-height: 1.5;
+    }
+
     .signature-card {
       background: white;
       padding: 30px;
       border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-      max-width: 680px;
-      margin: 0 auto 40px auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      margin-bottom: 30px;
+      border: 1px solid #E2E8F0;
     }
+
     .signature-title {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: #0071CE;
       margin-bottom: 20px;
       padding-bottom: 10px;
-      border-bottom: 1px solid #E5E7EB;
+      border-bottom: 1px solid #E2E8F0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .code-box {
-      background: #1E293B;
-      color: #F8FAFC;
-      padding: 16px;
+
+    .preview-box {
+      background: #FFFFFF;
+      border: 1px dashed #CBD5E1;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: #0071CE;
+      color: white;
+      border: none;
+      padding: 10px 18px;
       border-radius: 8px;
-      font-family: monospace;
       font-size: 12px;
-      overflow-x: auto;
-      margin-top: 15px;
-      white-space: pre-wrap;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: #005bb0;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #000543;
+    }
+
+    .btn-secondary:hover {
+      background: #00032b;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10B981;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      display: none;
+      animation: fadeIn 0.3s forwards;
+      z-index: 1000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <!-- ========================================== -->
-  <!-- 1. STANDARD EMPLOYEE / EXECUTIVE SIGNATURE -->
-  <!-- ========================================== -->
-  <div class="signature-card">
-    <div class="signature-title">1. Standard Employee / Executive Signature</div>
+  <div class="container">
+    
+    <div class="header-box">
+      <h1>PURVI AERO — EMAIL SIGNATURES</h1>
+      <p>Official corporate email signatures with permanent, transparent PNG logos for Gmail, Outlook, Apple Mail, and mobile clients.</p>
+    </div>
 
-    <!-- PREVIEW START -->
-    <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 600px; border-collapse: collapse;">
-      <tr>
-        <!-- Left Column: Stable Hosted Image -->
-        <td valign="top" style="padding-right: 20px; border-right: 2px solid #00999F; vertical-align: top;">
-          <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block;">
-            <img src="https://www.purviaero.com/assets/logo-signature.png" alt="Purvi Aero International" width="60" height="60" style="display: block; border: 0; outline: none; width: 60px; height: 60px;" />
-          </a>
-        </td>
-        
-        <!-- Right Column: Contact Details -->
-        <td valign="top" style="padding-left: 20px; vertical-align: top;">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              <td style="padding-bottom: 4px;">
-                <span style="font-family: 'Outfit', Arial, sans-serif; font-size: 18px; font-weight: 800; color: #000543; letter-spacing: 0.05em; display: block; line-height: 1.2;">SUKHWINDER KAUR</span>
-                <span style="font-family: 'Inter', Arial, sans-serif; font-size: 13px; font-weight: 600; color: #0071CE; display: block; margin-top: 2px;">Founder &amp; Managing Director</span>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding-bottom: 12px;">
-                <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 4px;">
-                  <tr>
-                    <td style="font-family: 'Outfit', Arial, sans-serif; font-size: 12px; font-weight: 800; color: #000543; letter-spacing: 0.1em; line-height: 1;">
-                      PURVI AERO
-                    </td>
-                    <td style="padding-left: 6px; font-family: 'Outfit', Arial, sans-serif; font-size: 8px; font-weight: 700; color: #0071CE; letter-spacing: 0.2em; text-transform: uppercase; line-height: 1; padding-top: 2px;">
-                      INTERNATIONAL FZC
-                    </td>
-                  </tr>
-                </table>
-                <div style="font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 500; color: #666666; font-style: italic; margin-top: 4px; letter-spacing: 0.05em;">
-                  Keeping the World Airborne
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; line-height: 1.6; color: #374151;">
-                <strong>E:</strong> <a href="mailto:info@purviaero.com" style="color: #0071CE; text-decoration: none;">info@purviaero.com</a><br>
-                <strong>W:</strong> <a href="https://www.purviaero.com" style="color: #0071CE; text-decoration: none;">www.purviaero.com</a><br>
-                <strong>A:</strong> Warehouse No. (A-02), Block - A, Umm Al Quwain FTZ, UAE
-              </td>
-            </tr>
-            <tr>
-              <td style="padding-top: 12px;">
-                <span style="font-size: 9px; color: #9CA3AF; line-height: 1.4; display: block; max-width: 440px;">
-                  This message and any attachments are confidential and intended solely for the use of the individual to whom it is addressed. If you have received this message in error, please notify the sender immediately.
-                </span>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-    <!-- PREVIEW END -->
+    <div class="notice-banner">
+      <strong>💡 Why the logo looked broken when opening this local file:</strong><br>
+      The signature references <code>https://www.purviaero.com/assets/logo-signature.png</code>. The preview below now loads both your <strong>local disk file</strong> and the <strong>live hosted URL</strong>. Once you push your changes to GitHub/Vercel (<code>git push origin master</code>), the URL will be permanently active for everyone globally!
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. STANDARD EXECUTIVE SIGNATURE           -->
+    <!-- ========================================== -->
+    <div class="signature-card">
+      <div class="signature-title">
+        <span>1. Standard Executive Signature (Founder & MD)</span>
+        <span style="font-size: 10px; color: #10B981; font-weight: 800; background: #ECFDF5; padding: 2px 8px; border-radius: 4px;">Recommended</span>
+      </div>
+
+      <div class="preview-box" id="sig1">
+        <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 580px; border-collapse: collapse; width: 100%;">
+          <tr>
+            <td valign="top" style="padding-right: 18px; border-right: 2px solid #00999F; vertical-align: top; width: 70px;">
+              <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block;">
+                <img src="../public/assets/logo-signature.png" alt="Purvi Aero" width="60" height="60" style="display: block; border: 0; outline: none; width: 60px; height: 60px;" />
+              </a>
+            </td>
+            <td valign="top" style="padding-left: 18px; vertical-align: top;">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding-bottom: 2px;">
+                    <span style="font-family: 'Outfit', Arial, sans-serif; font-size: 16px; font-weight: 800; color: #000543; letter-spacing: 0.05em; display: block; line-height: 1.2;">SUKHWINDER KAUR</span>
+                    <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 600; color: #0071CE; display: block; margin-top: 2px;">Founder &amp; Managing Director</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 10px;">
+                    <span style="font-family: 'Outfit', Arial, sans-serif; font-size: 11px; font-weight: 800; color: #000543; letter-spacing: 0.1em; line-height: 1;">PURVI AERO</span>
+                    <span style="padding-left: 4px; font-family: 'Outfit', Arial, sans-serif; font-size: 8px; font-weight: 700; color: #0071CE; letter-spacing: 0.2em; text-transform: uppercase; line-height: 1;">INTERNATIONAL FZC</span>
+                    <div style="font-family: Arial, sans-serif; font-size: 9px; color: #666666; font-style: italic; margin-top: 3px; letter-spacing: 0.05em;">Keeping the World Airborne</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family: Arial, sans-serif; font-size: 11px; line-height: 1.6; color: #374151;">
+                    <strong>E:</strong> <a href="mailto:info@purviaero.com" style="color: #0071CE; text-decoration: none;">info@purviaero.com</a><br>
+                    <strong>W:</strong> <a href="https://www.purviaero.com" style="color: #0071CE; text-decoration: none;">www.purviaero.com</a><br>
+                    <strong>A:</strong> Warehouse No. (A-02), Block - A, Umm Al Quwain FTZ, UAE
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn" onclick="copySignature('sig1', 'https://www.purviaero.com/assets/logo-signature.png')">
+          📋 1-Click Copy for Gmail / Outlook
+        </button>
+        <button class="btn btn-secondary" onclick="selectAndCopy('sig1')">
+          🖱️ Highlight &amp; Select
+        </button>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. TECHNICAL RFQ & SOURCING DESK          -->
+    <!-- ========================================== -->
+    <div class="signature-card">
+      <div class="signature-title">
+        <span>2. Technical Sourcing / RFQ Intake Desk</span>
+      </div>
+
+      <div class="preview-box" id="sig2">
+        <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 580px; border-collapse: collapse; width: 100%;">
+          <tr>
+            <td valign="top" style="padding-right: 18px; border-right: 2px solid #00999F; vertical-align: top; width: 70px;">
+              <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block;">
+                <img src="../public/assets/logo-signature.png" alt="Purvi Aero" width="60" height="60" style="display: block; border: 0; outline: none; width: 60px; height: 60px;" />
+              </a>
+            </td>
+            <td valign="top" style="padding-left: 18px; vertical-align: top;">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding-bottom: 2px;">
+                    <span style="font-family: 'Outfit', Arial, sans-serif; font-size: 16px; font-weight: 800; color: #000543; letter-spacing: 0.05em; display: block; line-height: 1.2;">TECHNICAL RFQ DESK</span>
+                    <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 600; color: #0071CE; display: block; margin-top: 2px;">Aircraft Spares, Consumables &amp; Rotables</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 10px;">
+                    <span style="font-family: 'Outfit', Arial, sans-serif; font-size: 11px; font-weight: 800; color: #000543; letter-spacing: 0.1em; line-height: 1;">PURVI AERO</span>
+                    <span style="padding-left: 4px; font-family: 'Outfit', Arial, sans-serif; font-size: 8px; font-weight: 700; color: #0071CE; letter-spacing: 0.2em; text-transform: uppercase; line-height: 1;">INTERNATIONAL FZC</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family: Arial, sans-serif; font-size: 11px; line-height: 1.6; color: #374151;">
+                    <strong>RFQ Intake:</strong> <a href="mailto:rfq@purviaero.com" style="color: #0071CE; text-decoration: none; font-weight: 700;">rfq@purviaero.com</a><br>
+                    <strong>General:</strong> <a href="mailto:info@purviaero.com" style="color: #0071CE; text-decoration: none;">info@purviaero.com</a><br>
+                    <strong>Web Portal:</strong> <a href="https://www.purviaero.com/contact" style="color: #0071CE; text-decoration: none;">www.purviaero.com/contact</a><br>
+                    <strong>Address:</strong> Warehouse No. (A-02), Block - A, Umm Al Quwain FTZ, UAE
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn" onclick="copySignature('sig2', 'https://www.purviaero.com/assets/logo-signature.png')">
+          📋 1-Click Copy for Gmail / Outlook
+        </button>
+        <button class="btn btn-secondary" onclick="selectAndCopy('sig2')">
+          🖱️ Highlight &amp; Select
+        </button>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 3. FULL HORIZONTAL LOGO SIGNATURE         -->
+    <!-- ========================================== -->
+    <div class="signature-card">
+      <div class="signature-title">
+        <span>3. Full Horizontal Brand Lockup Option</span>
+      </div>
+
+      <div class="preview-box" id="sig3">
+        <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 580px; border-collapse: collapse;">
+          <tr>
+            <td valign="top">
+              <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block; margin-bottom: 10px;">
+                <img src="../public/assets/logo-full-signature.png" alt="Purvi Aero International FZC" width="220" style="display: block; border: 0; outline: none; width: 220px; height: auto;" />
+              </a>
+              <div style="font-family: Arial, sans-serif; font-size: 11px; line-height: 1.6; color: #374151;">
+                <strong style="color: #000543;">Aviation Procurement &amp; Sourcing</strong><br>
+                <strong>Technical RFQ:</strong> <a href="mailto:rfq@purviaero.com" style="color: #0071CE; text-decoration: none;">rfq@purviaero.com</a> | 
+                <strong>Web:</strong> <a href="https://www.purviaero.com" style="color: #0071CE; text-decoration: none;">www.purviaero.com</a><br>
+                <span style="color: #6B7280; font-size: 10px;">Warehouse No. (A-02), Block - A, Umm Al Quwain Free Trade Zone, UAE</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn" onclick="copySignature('sig3', 'https://www.purviaero.com/assets/logo-full-signature.png')">
+          📋 1-Click Copy for Gmail / Outlook
+        </button>
+        <button class="btn btn-secondary" onclick="selectAndCopy('sig3')">
+          🖱️ Highlight &amp; Select
+        </button>
+      </div>
+    </div>
 
   </div>
 
-  <!-- ========================================== -->
-  <!-- 2. SALES / TECHNICAL RFQ DESK SIGNATURE   -->
-  <!-- ========================================== -->
-  <div class="signature-card">
-    <div class="signature-title">2. Sourcing / Technical RFQ Intake Desk</div>
+  <div class="toast" id="toast">✅ Signature copied to clipboard! Paste (Ctrl+V) into Gmail/Outlook.</div>
 
-    <!-- PREVIEW START -->
-    <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 600px; border-collapse: collapse;">
-      <tr>
-        <td valign="top" style="padding-right: 20px; border-right: 2px solid #00999F; vertical-align: top;">
-          <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block;">
-            <img src="https://www.purviaero.com/assets/logo-signature.png" alt="Purvi Aero" width="60" height="60" style="display: block; border: 0; outline: none; width: 60px; height: 60px;" />
-          </a>
-        </td>
-        <td valign="top" style="padding-left: 20px; vertical-align: top;">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              <td style="padding-bottom: 4px;">
-                <span style="font-family: 'Outfit', Arial, sans-serif; font-size: 18px; font-weight: 800; color: #000543; letter-spacing: 0.05em; display: block; line-height: 1.2;">TECHNICAL RFQ DESK</span>
-                <span style="font-family: 'Inter', Arial, sans-serif; font-size: 13px; font-weight: 600; color: #0071CE; display: block; margin-top: 2px;">Aircraft Spares, Consumables &amp; Rotables</span>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding-bottom: 12px;">
-                <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 4px;">
-                  <tr>
-                    <td style="font-family: 'Outfit', Arial, sans-serif; font-size: 12px; font-weight: 800; color: #000543; letter-spacing: 0.1em; line-height: 1;">
-                      PURVI AERO
-                    </td>
-                    <td style="padding-left: 6px; font-family: 'Outfit', Arial, sans-serif; font-size: 8px; font-weight: 700; color: #0071CE; letter-spacing: 0.2em; text-transform: uppercase; line-height: 1; padding-top: 2px;">
-                      INTERNATIONAL FZC
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; line-height: 1.6; color: #374151;">
-                <strong>RFQ Intake:</strong> <a href="mailto:rfq@purviaero.com" style="color: #0071CE; text-decoration: none; font-weight: 700;">rfq@purviaero.com</a><br>
-                <strong>General:</strong> <a href="mailto:info@purviaero.com" style="color: #0071CE; text-decoration: none;">info@purviaero.com</a><br>
-                <strong>Web Portal:</strong> <a href="https://www.purviaero.com/contact" style="color: #0071CE; text-decoration: none;">www.purviaero.com/contact</a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-    <!-- PREVIEW END -->
+  <script>
+    async function copySignature(elementId, hostedImageUrl) {
+      const el = document.getElementById(elementId);
+      let html = el.innerHTML;
+      
+      // Replace local relative path with live public HTTPS URL
+      html = html.replace(/src="[^"]*"/gi, `src="${hostedImageUrl}"`);
 
-  </div>
+      try {
+        const blobHtml = new Blob([html], { type: 'text/html' });
+        const blobText = new Blob([el.innerText], { type: 'text/plain' });
+        const item = new ClipboardItem({
+          'text/html': blobHtml,
+          'text/plain': blobText
+        });
+        await navigator.clipboard.write([item]);
+        showToast();
+      } catch (err) {
+        // Fallback for older browsers
+        selectAndCopy(elementId);
+      }
+    }
 
-  <!-- ========================================== -->
-  <!-- 3. FULL HORIZONTAL LOGO SIGNATURE OPTION   -->
-  <!-- ========================================== -->
-  <div class="signature-card">
-    <div class="signature-title">3. Full Horizontal Brand Lockup Option</div>
+    function selectAndCopy(elementId) {
+      const el = document.getElementById(elementId);
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        showToast();
+      } catch (e) {
+        alert('Please press Ctrl+C to copy the highlighted signature');
+      }
+    }
 
-    <!-- PREVIEW START -->
-    <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 600px; border-collapse: collapse;">
-      <tr>
-        <td valign="top">
-          <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block; margin-bottom: 12px;">
-            <img src="https://www.purviaero.com/assets/logo-full-signature.png" alt="Purvi Aero International FZC" width="220" style="display: block; border: 0; outline: none; width: 220px; height: auto;" />
-          </a>
-          <div style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; line-height: 1.6; color: #374151;">
-            <strong>Aviation Procurement &amp; Sourcing</strong><br>
-            <strong>Technical RFQ:</strong> <a href="mailto:rfq@purviaero.com" style="color: #0071CE; text-decoration: none;">rfq@purviaero.com</a> | 
-            <strong>Web:</strong> <a href="https://www.purviaero.com" style="color: #0071CE; text-decoration: none;">www.purviaero.com</a><br>
-            <span style="color: #6B7280; font-size: 11px;">Warehouse No. (A-02), Block - A, Umm Al Quwain Free Trade Zone, UAE</span>
-          </div>
-        </td>
-      </tr>
-    </table>
-    <!-- PREVIEW END -->
-
-  </div>
+    function showToast() {
+      const t = document.getElementById('toast');
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 3500);
+    }
+  </script>
 
 </body>
 </html>
