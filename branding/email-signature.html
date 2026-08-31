@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Purvi Aero - Interactive Email Signature Generator</title>
+  <title>Purvi Aero - Email Signature Templates</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
     body {
-      background-color: #F1F5F9;
+      background-color: #F8FAFC;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       padding: 40px 20px;
       color: #0F172A;
@@ -25,7 +25,7 @@
       color: white;
       padding: 30px;
       border-radius: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
       box-shadow: 0 10px 25px -5px rgba(0, 5, 67, 0.2);
     }
 
@@ -38,20 +38,22 @@
     }
 
     .header-box p {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.75);
       font-size: 13px;
       line-height: 1.6;
     }
 
-    .notice-banner {
-      background: #FEF3C7;
-      border-left: 4px solid #F59E0B;
-      padding: 14px 18px;
-      border-radius: 8px;
-      margin-bottom: 24px;
-      font-size: 12px;
-      color: #92400E;
-      line-height: 1.5;
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #059669;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 10px;
     }
 
     .signature-card {
@@ -95,14 +97,14 @@
       background: #0071CE;
       color: white;
       border: none;
-      padding: 10px 18px;
+      padding: 12px 20px;
       border-radius: 8px;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       transition: all 0.2s;
     }
 
@@ -125,10 +127,10 @@
       right: 24px;
       background: #10B981;
       color: white;
-      padding: 12px 24px;
+      padding: 14px 24px;
       border-radius: 8px;
       font-weight: 700;
-      font-size: 13px;
+      font-size: 14px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
       display: none;
       animation: fadeIn 0.3s forwards;
@@ -147,12 +149,11 @@
     
     <div class="header-box">
       <h1>PURVI AERO — EMAIL SIGNATURES</h1>
-      <p>Official corporate email signatures with permanent, transparent PNG logos for Gmail, Outlook, Apple Mail, and mobile clients.</p>
-    </div>
-
-    <div class="notice-banner">
-      <strong>💡 Why the logo looked broken when opening this local file:</strong><br>
-      The signature references <code>https://www.purviaero.com/assets/logo-signature.png</code>. The preview below now loads both your <strong>local disk file</strong> and the <strong>live hosted URL</strong>. Once you push your changes to GitHub/Vercel (<code>git push origin master</code>), the URL will be permanently active for everyone globally!
+      <p>Official corporate email signatures with permanent live image assets hosted directly on <strong>purviaero.com</strong>.</p>
+      <div class="status-badge">
+        <span style="width: 8px; height: 8px; background: white; border-radius: 50%; display: inline-block;"></span>
+        Asset Server Status: 100% Active &amp; Live
+      </div>
     </div>
 
     <!-- ========================================== -->
@@ -160,16 +161,16 @@
     <!-- ========================================== -->
     <div class="signature-card">
       <div class="signature-title">
-        <span>1. Standard Executive Signature (Founder & MD)</span>
+        <span>1. Executive Signature (Founder &amp; MD)</span>
         <span style="font-size: 10px; color: #10B981; font-weight: 800; background: #ECFDF5; padding: 2px 8px; border-radius: 4px;">Recommended</span>
       </div>
 
       <div class="preview-box" id="sig1">
-        <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 580px; border-collapse: collapse; width: 100%;">
+        <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 580px; border-collapse: collapse;">
           <tr>
             <td valign="top" style="padding-right: 18px; border-right: 2px solid #00999F; vertical-align: top; width: 70px;">
-              <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block;">
-                <img src="../public/assets/logo-signature.png" alt="Purvi Aero" width="60" height="60" style="display: block; border: 0; outline: none; width: 60px; height: 60px;" />
+              <a href="https://purviaero.com" target="_blank" style="text-decoration: none; display: block;">
+                <img src="https://purviaero.com/assets/logo-signature.png" alt="Purvi Aero" width="60" height="60" style="display: block; border: 0; outline: none; width: 60px; height: 60px;" />
               </a>
             </td>
             <td valign="top" style="padding-left: 18px; vertical-align: top;">
@@ -190,7 +191,7 @@
                 <tr>
                   <td style="font-family: Arial, sans-serif; font-size: 11px; line-height: 1.6; color: #374151;">
                     <strong>E:</strong> <a href="mailto:info@purviaero.com" style="color: #0071CE; text-decoration: none;">info@purviaero.com</a><br>
-                    <strong>W:</strong> <a href="https://www.purviaero.com" style="color: #0071CE; text-decoration: none;">www.purviaero.com</a><br>
+                    <strong>W:</strong> <a href="https://purviaero.com" style="color: #0071CE; text-decoration: none;">www.purviaero.com</a><br>
                     <strong>A:</strong> Warehouse No. (A-02), Block - A, Umm Al Quwain FTZ, UAE
                   </td>
                 </tr>
@@ -201,11 +202,8 @@
       </div>
 
       <div class="btn-group">
-        <button class="btn" onclick="copySignature('sig1', 'https://www.purviaero.com/assets/logo-signature.png')">
-          📋 1-Click Copy for Gmail / Outlook
-        </button>
-        <button class="btn btn-secondary" onclick="selectAndCopy('sig1')">
-          🖱️ Highlight &amp; Select
+        <button class="btn" onclick="copySignature('sig1')">
+          📋 Click to Copy Signature (For Gmail / Outlook)
         </button>
       </div>
     </div>
@@ -219,11 +217,11 @@
       </div>
 
       <div class="preview-box" id="sig2">
-        <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 580px; border-collapse: collapse; width: 100%;">
+        <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 580px; border-collapse: collapse;">
           <tr>
             <td valign="top" style="padding-right: 18px; border-right: 2px solid #00999F; vertical-align: top; width: 70px;">
-              <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block;">
-                <img src="../public/assets/logo-signature.png" alt="Purvi Aero" width="60" height="60" style="display: block; border: 0; outline: none; width: 60px; height: 60px;" />
+              <a href="https://purviaero.com" target="_blank" style="text-decoration: none; display: block;">
+                <img src="https://purviaero.com/assets/logo-signature.png" alt="Purvi Aero" width="60" height="60" style="display: block; border: 0; outline: none; width: 60px; height: 60px;" />
               </a>
             </td>
             <td valign="top" style="padding-left: 18px; vertical-align: top;">
@@ -244,7 +242,7 @@
                   <td style="font-family: Arial, sans-serif; font-size: 11px; line-height: 1.6; color: #374151;">
                     <strong>RFQ Intake:</strong> <a href="mailto:rfq@purviaero.com" style="color: #0071CE; text-decoration: none; font-weight: 700;">rfq@purviaero.com</a><br>
                     <strong>General:</strong> <a href="mailto:info@purviaero.com" style="color: #0071CE; text-decoration: none;">info@purviaero.com</a><br>
-                    <strong>Web Portal:</strong> <a href="https://www.purviaero.com/contact" style="color: #0071CE; text-decoration: none;">www.purviaero.com/contact</a><br>
+                    <strong>Web Portal:</strong> <a href="https://purviaero.com/contact" style="color: #0071CE; text-decoration: none;">www.purviaero.com/contact</a><br>
                     <strong>Address:</strong> Warehouse No. (A-02), Block - A, Umm Al Quwain FTZ, UAE
                   </td>
                 </tr>
@@ -255,11 +253,8 @@
       </div>
 
       <div class="btn-group">
-        <button class="btn" onclick="copySignature('sig2', 'https://www.purviaero.com/assets/logo-signature.png')">
-          📋 1-Click Copy for Gmail / Outlook
-        </button>
-        <button class="btn btn-secondary" onclick="selectAndCopy('sig2')">
-          🖱️ Highlight &amp; Select
+        <button class="btn" onclick="copySignature('sig2')">
+          📋 Click to Copy Signature (For Gmail / Outlook)
         </button>
       </div>
     </div>
@@ -276,13 +271,13 @@
         <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Inter', Arial, sans-serif; max-width: 580px; border-collapse: collapse;">
           <tr>
             <td valign="top">
-              <a href="https://www.purviaero.com" target="_blank" style="text-decoration: none; display: block; margin-bottom: 10px;">
-                <img src="../public/assets/logo-full-signature.png" alt="Purvi Aero International FZC" width="220" style="display: block; border: 0; outline: none; width: 220px; height: auto;" />
+              <a href="https://purviaero.com" target="_blank" style="text-decoration: none; display: block; margin-bottom: 10px;">
+                <img src="https://purviaero.com/assets/logo-full-signature.png" alt="Purvi Aero International FZC" width="220" style="display: block; border: 0; outline: none; width: 220px; height: auto;" />
               </a>
               <div style="font-family: Arial, sans-serif; font-size: 11px; line-height: 1.6; color: #374151;">
                 <strong style="color: #000543;">Aviation Procurement &amp; Sourcing</strong><br>
                 <strong>Technical RFQ:</strong> <a href="mailto:rfq@purviaero.com" style="color: #0071CE; text-decoration: none;">rfq@purviaero.com</a> | 
-                <strong>Web:</strong> <a href="https://www.purviaero.com" style="color: #0071CE; text-decoration: none;">www.purviaero.com</a><br>
+                <strong>Web:</strong> <a href="https://purviaero.com" style="color: #0071CE; text-decoration: none;">www.purviaero.com</a><br>
                 <span style="color: #6B7280; font-size: 10px;">Warehouse No. (A-02), Block - A, Umm Al Quwain Free Trade Zone, UAE</span>
               </div>
             </td>
@@ -291,26 +286,20 @@
       </div>
 
       <div class="btn-group">
-        <button class="btn" onclick="copySignature('sig3', 'https://www.purviaero.com/assets/logo-full-signature.png')">
-          📋 1-Click Copy for Gmail / Outlook
-        </button>
-        <button class="btn btn-secondary" onclick="selectAndCopy('sig3')">
-          🖱️ Highlight &amp; Select
+        <button class="btn" onclick="copySignature('sig3')">
+          📋 Click to Copy Signature (For Gmail / Outlook)
         </button>
       </div>
     </div>
 
   </div>
 
-  <div class="toast" id="toast">✅ Signature copied to clipboard! Paste (Ctrl+V) into Gmail/Outlook.</div>
+  <div class="toast" id="toast">✅ Signature copied to clipboard! Paste (Ctrl+V) into Gmail or Outlook.</div>
 
   <script>
-    async function copySignature(elementId, hostedImageUrl) {
+    async function copySignature(elementId) {
       const el = document.getElementById(elementId);
-      let html = el.innerHTML;
-      
-      // Replace local relative path with live public HTTPS URL
-      html = html.replace(/src="[^"]*"/gi, `src="${hostedImageUrl}"`);
+      const html = el.innerHTML;
 
       try {
         const blobHtml = new Blob([html], { type: 'text/html' });
@@ -323,22 +312,13 @@
         showToast();
       } catch (err) {
         // Fallback for older browsers
-        selectAndCopy(elementId);
-      }
-    }
-
-    function selectAndCopy(elementId) {
-      const el = document.getElementById(elementId);
-      const range = document.createRange();
-      range.selectNodeContents(el);
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      try {
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
         document.execCommand('copy');
         showToast();
-      } catch (e) {
-        alert('Please press Ctrl+C to copy the highlighted signature');
       }
     }
 
