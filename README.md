@@ -14,5 +14,6 @@ Modern, professional, and highly responsive website for **Purvi Aero Internation
 -   **Fonts**: Inter, Outfit
 
 ## Contact
--   **Email**: [rfq@purviaero.com](mailto:rfq@purviaero.com)
--   **Inquiries**: [info@purviaero.com](mailto:info@purviaero.com)
+-   **Direct Phone**: [+971 589603693](tel:+971589603693)
+-   **RFQ Intake**: [rfq@purviaerointernational.com](mailto:rfq@purviaerointernational.com)
+-   **General Inquiries**: [info@purviaerointernational.com](mailto:info@purviaerointernational.com)

@@ -121,8 +121,13 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact" className="btn-primary px-12 py-5 text-lg shadow-secondary/20">Request Quote</Link>
               <div className="flex flex-col items-center sm:items-start text-left px-8 py-4 bg-primary/5 rounded-2xl">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-accent mb-1">General Inbox</span>
-                <span className="text-sm font-bold text-primary">info@purviaero.com</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-accent mb-1">General Inbox &amp; Phone</span>
+                <a href="tel:+971589603693" className="text-xs font-bold text-secondary hover:underline block mb-1">
+                  +971 589603693
+                </a>
+                <a href="mailto:info@purviaerointernational.com" className="text-sm font-bold text-primary hover:text-secondary transition-colors block">
+                  info@purviaerointernational.com
+                </a>
               </div>
             </div>
           </FadeIn>

@@ -236,8 +236,13 @@ export default function ConsumablesPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact" className="btn-primary px-12 py-5 text-lg">Request Consumable Quote</Link>
               <div className="flex flex-col items-center sm:items-start text-white/40">
-                <span className="text-[10px] font-bold uppercase tracking-widest mb-1">Direct Line</span>
-                <span className="text-sm font-bold text-white/80">rfq@purviaero.com</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest mb-1">Direct Technical Line</span>
+                <a href="tel:+971589603693" className="text-sm font-bold text-secondary hover:underline">
+                  +971 589603693
+                </a>
+                <a href="mailto:rfq@purviaerointernational.com" className="text-xs font-bold text-white/80 hover:text-white">
+                  rfq@purviaerointernational.com
+                </a>
               </div>
             </div>
           </FadeIn>

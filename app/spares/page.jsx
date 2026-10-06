@@ -226,8 +226,13 @@ export default function SparesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary px-12 py-5 text-lg shadow-secondary/20">Submit Spares RFQ</Link>
               <div className="text-left px-6 py-4 bg-[#F9FAFB] rounded-2xl border border-primary/5">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-accent mb-1">Direct Intake</p>
-                <p className="text-sm font-bold text-primary">rfq@purviaero.com</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-accent mb-1">Direct Intake &amp; Line</p>
+                <a href="tel:+971589603693" className="text-xs font-bold text-secondary hover:underline block mb-1">
+                  +971 589603693
+                </a>
+                <a href="mailto:rfq@purviaerointernational.com" className="text-sm font-bold text-primary hover:text-secondary transition-colors block">
+                  rfq@purviaerointernational.com
+                </a>
               </div>
             </div>
           </FadeIn>

@@ -3,7 +3,7 @@ import FadeIn from '@/components/FadeIn';
 
 export const metadata = {
   title: 'Priority AOG Support | Purvi Aero International FZC',
-  description: 'Aircraft on ground? Our dedicated team provides priority support to expedite critical aviation spares directly to your facility. rfq@purviaero.com',
+  description: 'Aircraft on ground? Our dedicated team provides priority support to expedite critical aviation spares directly to your facility. Call +971 589603693 or email rfq@purviaerointernational.com',
 };
 
 const protocol = [
@@ -116,8 +116,13 @@ export default function AOGPage() {
                   Submit Priority RFQ
                 </Link>
                 <div className="hidden lg:block text-right">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-1">Emergency Inbox</p>
-                  <p className="text-white font-bold text-lg">rfq@purviaero.com</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-1">Emergency Line &amp; Inbox</p>
+                  <a href="tel:+971589603693" className="text-secondary font-bold text-lg hover:underline block">
+                    +971 589603693
+                  </a>
+                  <a href="mailto:rfq@purviaerointernational.com" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
+                    rfq@purviaerointernational.com
+                  </a>
                 </div>
               </div>
             </div>

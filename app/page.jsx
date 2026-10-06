@@ -274,7 +274,12 @@ export default function Home() {
                 <Link href="/aog" className="btn-primary px-12 py-6 text-xl shadow-2xl shadow-secondary/50 w-full lg:w-auto text-center focus:outline-none focus:ring-2 focus:ring-secondary">Access AOG Desk</Link>
                 <div className="hidden lg:block text-right">
                   <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/30 mb-1">Emergency Desk</p>
-                  <p className="text-white font-bold text-lg">rfq@purviaero.com</p>
+                  <a href="tel:+971589603693" className="text-secondary font-bold text-base hover:underline block">
+                    +971 589603693
+                  </a>
+                  <a href="mailto:rfq@purviaerointernational.com" className="text-white/80 font-bold text-sm hover:text-white block">
+                    rfq@purviaerointernational.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -295,7 +300,12 @@ export default function Home() {
               <Link href="/contact" className="btn-primary px-12 py-5 text-lg focus:outline-none focus:ring-2 focus:ring-secondary">Request Quote</Link>
               <div className="flex flex-col items-center sm:items-start text-white/40">
                 <span className="text-[10px] font-mono font-bold uppercase tracking-widest mb-1">Direct Technical Line</span>
-                <span className="text-sm font-bold text-white/80">rfq@purviaero.com</span>
+                <a href="tel:+971589603693" className="text-sm font-bold text-secondary hover:underline">
+                  +971 589603693
+                </a>
+                <a href="mailto:rfq@purviaerointernational.com" className="text-xs font-bold text-white/80 hover:text-white">
+                  rfq@purviaerointernational.com
+                </a>
               </div>
             </div>
           </FadeIn>

@@ -91,15 +91,21 @@ const Footer = () => {
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-8">Contact Desks</h4>
             <div className="space-y-6">
               <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-2">Direct Phone</p>
+                <a href="tel:+971589603693" className="text-white font-bold hover:text-secondary transition-colors block">
+                  +971 589603693
+                </a>
+              </div>
+              <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-2">Technical RFQ Intake</p>
-                <a href="mailto:rfq@purviaero.com" className="text-white font-bold hover:text-secondary transition-colors block">
-                  rfq@purviaero.com
+                <a href="mailto:rfq@purviaerointernational.com" className="text-white font-bold hover:text-secondary transition-colors block">
+                  rfq@purviaerointernational.com
                 </a>
               </div>
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-2">General Enquiries</p>
-                <a href="mailto:info@purviaero.com" className="text-white font-bold hover:text-secondary transition-colors block">
-                  info@purviaero.com
+                <a href="mailto:info@purviaerointernational.com" className="text-white font-bold hover:text-secondary transition-colors block">
+                  info@purviaerointernational.com
                 </a>
               </div>
               <div className="pt-4 border-t border-white/5">

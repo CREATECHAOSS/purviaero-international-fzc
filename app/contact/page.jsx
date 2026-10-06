@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 /* ─────────────────────────────────────────────
    Aviation RFQ Intake Page — Purvi Aero
    Operational focus: Technical part sourcing
-   Email: rfq@purviaero.com (Main) · info@purviaero.com
+   Phone: +971 589603693 · Email: rfq@purviaerointernational.com · info@purviaerointernational.com
 ───────────────────────────────────────────── */
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -76,20 +76,39 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-1">RFQ Intake Desk</p>
-                  <p className="text-white font-bold text-xl">rfq@purviaero.com</p>
+                  <a href="mailto:rfq@purviaerointernational.com" className="text-white font-bold text-xl hover:text-secondary transition-colors block">
+                    rfq@purviaerointernational.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Direct Phone */}
+              <div className="flex items-start gap-4 p-6 border border-primary/10 rounded-2xl bg-white shadow-sm">
+                <div className="w-12 h-12 bg-primary/5 flex items-center justify-center rounded-xl shrink-0">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#374151] opacity-50 mb-1">Direct Phone</p>
+                  <a href="tel:+971589603693" className="text-primary font-bold text-xl hover:text-secondary transition-colors block">
+                    +971 589603693
+                  </a>
                 </div>
               </div>
 
               {/* General Desk */}
               <div className="flex items-start gap-4 p-6 border border-primary/10 rounded-2xl">
-                <div className="w-12 h-12 bg-primary/5 flex items-center justify-center rounded-xl">
+                <div className="w-12 h-12 bg-primary/5 flex items-center justify-center rounded-xl shrink-0">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#374151] opacity-50 mb-1">General Inquiries</p>
-                  <p className="text-primary font-bold text-xl">info@purviaero.com</p>
+                  <a href="mailto:info@purviaerointernational.com" className="text-primary font-bold text-xl hover:text-secondary transition-colors block">
+                    info@purviaerointernational.com
+                  </a>
                 </div>
               </div>
 
@@ -251,7 +270,7 @@ export default function ContactPage() {
                       <span>Submit Technical RFQ</span>
                     </button>
                     <p className="text-[10px] text-center mt-6 text-[#374151] opacity-50 uppercase tracking-widest font-bold">
-                      Direct RFQs to rfq@purviaero.com for prioritized processing.
+                      Direct RFQs to rfq@purviaerointernational.com or call +971 589603693 for prioritized processing.
                     </p>
                   </div>
                 </div>
